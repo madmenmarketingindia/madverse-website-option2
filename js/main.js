@@ -140,6 +140,8 @@
     var isTransitioning = false;
     var autoplayTimer = null;
     var autoplayDelay = 5000;
+    var touchStartX = 0;
+    var touchStartY = 0;
     if (cards.length < 2) return;
 
     function stopAutoplay() {
@@ -240,6 +242,29 @@
       showCard(activeIndex + 1, 1);
       startAutoplay();
     });
+
+    track.addEventListener("touchstart", function (event) {
+      if (!event.touches.length) return;
+      touchStartX = event.touches[0].clientX;
+      touchStartY = event.touches[0].clientY;
+      stopAutoplay();
+    }, { passive: true });
+
+    track.addEventListener("touchend", function (event) {
+      if (!event.changedTouches.length) return;
+
+      var deltaX = event.changedTouches[0].clientX - touchStartX;
+      var deltaY = event.changedTouches[0].clientY - touchStartY;
+      var isHorizontalSwipe = Math.abs(deltaX) >= 40 && Math.abs(deltaX) > Math.abs(deltaY);
+
+      if (isHorizontalSwipe) {
+        showCard(activeIndex + (deltaX < 0 ? 1 : -1), deltaX < 0 ? 1 : -1);
+      }
+
+      startAutoplay();
+    }, { passive: true });
+
+    track.addEventListener("touchcancel", startAutoplay, { passive: true });
 
     track.addEventListener("pointerenter", stopAutoplay);
     track.addEventListener("pointerleave", startAutoplay);
