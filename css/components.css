@@ -311,6 +311,14 @@
 .nav-toggle__icon::after { transform: translateY(0.625rem); }
 
 @media (max-width: 767px) {
+  .site-header {
+    --header-height: 5.5rem;
+  }
+
+  .site-logo {
+    transform: none;
+  }
+
   .site-logo img {
     width: min(11rem, 100%);
   }
