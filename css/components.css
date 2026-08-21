@@ -320,19 +320,19 @@
   }
 
   .site-logo img {
-    width: min(11rem, 100%);
+    width: min(10.5rem, 100%);
   }
 
   .nav-toggle {
-    width: 2.5rem;
-    height: 2.5rem;
-    flex-basis: 2.5rem;
+    width: 2.375rem;
+    height: 2.375rem;
+    flex-basis: 2.375rem;
   }
 
   .nav-toggle__icon,
   .nav-toggle__icon::before,
   .nav-toggle__icon::after {
-    width: 1.75rem;
+    width: 1.625rem;
   }
 }
 
