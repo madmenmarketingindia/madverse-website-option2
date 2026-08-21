@@ -312,7 +312,7 @@
 
 @media (max-width: 767px) {
   .site-header {
-    --header-height: 5.5rem;
+    --header-height: 5.25rem;
   }
 
   .site-logo {
