@@ -1,0 +1,115 @@
+/* ==========================================================================
+   MADVERSE — TYPEFACE
+   Celias is the only typeface used across the site. The family ships as
+   7 weights x 2 styles (roman/italic). CSS font-weight numbers are mapped
+   to the closest standard step so `font-weight` alone selects the right cut.
+
+   NOTE: files are shipped as .otf only. For production, convert to .woff2
+   (e.g. via `fonttools` or google/woff2) and add a woff2 src ahead of the
+   otf fallback — otf is fine for local dev but heavier over the wire.
+   ========================================================================== */
+
+@font-face {
+  font-family: "Celias";
+  src: url("../assets/fonts/celias/celiashairline.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celias";
+  src: url("../assets/fonts/celias/celiashairlineitalic.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Celias";
+  src: url("../assets/fonts/celias/celiasthin.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celias";
+  src: url("../assets/fonts/celias/celiasthinitalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Celias";
+  src: url("../assets/fonts/celias/celiaslight.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celias";
+  src: url("../assets/fonts/celias/celiaslightitalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Celias";
+  src: url("../assets/fonts/celias/celias.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celias";
+  src: url("../assets/fonts/celias/celiasregularitalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Celias";
+  src: url("../assets/fonts/celias/celiasmedium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celias";
+  src: url("../assets/fonts/celias/celiasmediumitalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Celias";
+  src: url("../assets/fonts/celias/celiasbold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celias";
+  src: url("../assets/fonts/celias/celiasbolditalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Celias";
+  src: url("../assets/fonts/celias/celiasblack.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celias";
+  src: url("../assets/fonts/celias/celiasblackitalic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}

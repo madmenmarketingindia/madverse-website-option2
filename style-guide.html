@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Madverse — Design System</title>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+<style>
+  /* Style-guide-only presentation chrome — not part of the design system
+     itself, kept local to this file. */
+  .sg-nav {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-sticky);
+    background: rgba(10,10,10,0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-4) var(--gutter-inline);
+    display: flex;
+    gap: var(--space-5);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .sg-nav::-webkit-scrollbar { display: none; }
+  .sg-nav a {
+    font-size: var(--text-caption);
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-text-tertiary);
+    white-space: nowrap;
+  }
+  .sg-nav a:hover { color: var(--color-text-primary); }
+
+  .sg-header {
+    padding: var(--space-8) var(--gutter-inline) var(--space-4);
+  }
+  .sg-header p { max-width: 640px; margin-top: var(--space-3); }
+
+  .sg-block { border-top: 1px solid var(--color-border); }
+  .sg-block > .container { padding-block: var(--space-16); }
+  .sg-block h2 { margin-bottom: var(--space-2); }
+  .sg-block > .container > p.text-body-lg { max-width: 640px; margin-bottom: var(--space-10); }
+
+  .swatch-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+  .swatch {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+  }
+  .swatch__fill { height: 84px; }
+  .swatch__meta { padding: var(--space-3) var(--space-4); background: var(--color-surface-1); }
+  .swatch__meta .name { font-size: var(--text-caption); font-weight: var(--font-bold); }
+  .swatch__meta .hex { font-size: var(--text-label); color: var(--color-text-tertiary); font-family: monospace; }
+
+  .type-row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding-block: var(--space-6);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .type-row:last-child { border-bottom: none; }
+  .type-row .meta {
+    display: flex;
+    gap: var(--space-4);
+    font-family: monospace;
+    font-size: var(--text-label);
+    color: var(--color-text-tertiary);
+    text-transform: none;
+    letter-spacing: normal;
+  }
+
+  .weight-strip {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  .weight-strip .row {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-4);
+  }
+  .weight-strip .tagname {
+    width: 84px;
+    flex-shrink: 0;
+    font-family: monospace;
+    font-size: var(--text-label);
+    color: var(--color-text-tertiary);
+  }
+
+  .space-strip { display: flex; flex-direction: column; gap: var(--space-3); }
+  .space-strip .row { display: flex; align-items: center; gap: var(--space-4); }
+  .space-strip .bar { background: var(--color-red); height: 10px; border-radius: 4px; }
+  .space-strip .label-name { width: 88px; flex-shrink: 0; font-family: monospace; font-size: var(--text-label); color: var(--color-text-tertiary); }
+
+  .btn-row { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; }
+  .demo-surface--black { background: var(--color-black); padding: var(--space-8); border-radius: var(--radius-lg); }
+  .demo-surface--red { background: var(--color-red); padding: var(--space-8); border-radius: var(--radius-lg); }
+
+  .card-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .stat-demo .stats-grid { background: var(--color-black); padding: var(--space-8); border-radius: var(--radius-lg); }
+
+  .tabs-demo { background: var(--color-black); padding: var(--space-6); border-radius: var(--radius-lg); }
+
+  .reveal-demo-box {
+    background: var(--color-surface-1);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-10);
+    text-align: center;
+  }
+
+  .section-rhythm-demo {
+    border: 1px dashed var(--color-border-strong);
+    border-radius: var(--radius-md);
+  }
+  .section-rhythm-demo .py-mark {
+    background: var(--color-red-tint-10);
+    border-top: 1px dashed var(--color-red);
+    border-bottom: 1px dashed var(--color-red);
+    padding-block: var(--section-py-tight);
+    text-align: center;
+  }
+
+  .logo-grid-demo { background: var(--color-black); padding: var(--space-8); border-radius: var(--radius-lg); }
+
+  .layout-demo__cell {
+    min-height: var(--space-16);
+    display: grid;
+    place-items: center;
+    background: var(--color-red-tint-20);
+    border: 1px solid var(--color-red);
+    font-size: var(--text-label);
+    font-weight: var(--font-bold);
+  }
+
+  .layout-specs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+    gap: var(--space-4);
+    margin-block: var(--space-8);
+  }
+
+  .layout-specs > div {
+    padding: var(--space-5);
+    background: var(--color-surface-1);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+  }
+
+  .layout-specs strong,
+  .layout-specs code { display: block; }
+  .layout-specs code { margin-top: var(--space-2); color: var(--color-text-secondary); }
+
+  @media (min-width: 768px) {
+    .swatch-grid { grid-template-columns: repeat(4, 1fr); }
+    .card-row { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<nav class="sg-nav">
+  <a href="#colors">Colors</a>
+  <a href="#type">Typography</a>
+  <a href="#spacing">Spacing</a>
+  <a href="#layout">Responsive layout</a>
+  <a href="#buttons">Buttons</a>
+  <a href="#tags">Tags</a>
+  <a href="#cards">Cards</a>
+  <a href="#stats">Stats</a>
+  <a href="#tabs">Tabs</a>
+  <a href="#logos">Logo grid</a>
+  <a href="#motion">Motion</a>
+</nav>
+
+<header class="sg-header container">
+  <span class="eyebrow eyebrow--red">Madverse · Design System</span>
+  <h1 class="text-display" style="margin-top: var(--space-3);">UI Foundation</h1>
+  <p class="text-body-lg">
+    Theme, color, type, spacing, tabs and motion — defined once as reusable
+    tokens in <code>css/tokens.css</code> and consumed everywhere else.
+    Mobile-first: every size below is what ships on a phone; resize this
+    window to see the fluid scale extend toward desktop.
+  </p>
+</header>
+
+<!-- ============================================================ COLORS -->
+<section id="colors" class="sg-block">
+  <div class="container">
+    <span class="label">01 · Color</span>
+    <h2>Palette</h2>
+    <p class="text-body-lg">
+      Black is the default field. Red is a single, disciplined accent —
+      CTAs, emphasis, active states — never a large background unless the
+      section is deliberately a "red moment" (e.g. Madtalks).
+    </p>
+
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="swatch__fill" style="background: var(--color-black);"></div>
+        <div class="swatch__meta"><div class="name">Black</div><div class="hex">#000000</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch__fill" style="background: var(--color-bg);"></div>
+        <div class="swatch__meta"><div class="name">Background</div><div class="hex">#0A0A0A</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch__fill" style="background: var(--color-surface-1);"></div>
+        <div class="swatch__meta"><div class="name">Surface 1</div><div class="hex">#141414</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch__fill" style="background: var(--color-surface-2);"></div>
+        <div class="swatch__meta"><div class="name">Surface 2</div><div class="hex">#1E1E1E</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch__fill" style="background: var(--color-red);"></div>
+        <div class="swatch__meta"><div class="name">Red</div><div class="hex">#D71920</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch__fill" style="background: var(--color-red-dark);"></div>
+        <div class="swatch__meta"><div class="name">Red Dark</div><div class="hex">#8C1114</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch__fill" style="background: var(--color-red-light);"></div>
+        <div class="swatch__meta"><div class="name">Red Light</div><div class="hex">#F0393E</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch__fill" style="background: var(--color-off-white);"></div>
+        <div class="swatch__meta"><div class="name">Off White</div><div class="hex">#F5F5F3</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch__fill" style="background: var(--color-text-secondary);"></div>
+        <div class="swatch__meta"><div class="name">Text Secondary</div><div class="hex">#B3B3B3</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch__fill" style="background: var(--color-text-tertiary);"></div>
+        <div class="swatch__meta"><div class="name">Text Tertiary</div><div class="hex">#7A7A7A</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch__fill" style="background: var(--color-border-strong);"></div>
+        <div class="swatch__meta"><div class="name">Border</div><div class="hex">rgba(255,255,255,.18)</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch__fill" style="background: var(--color-red-tint-20);"></div>
+        <div class="swatch__meta"><div class="name">Red tint 20%</div><div class="hex">rgba(215,25,32,.2)</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ TYPE -->
+<section id="type" class="sg-block">
+  <div class="container">
+    <span class="label">02 · Typography</span>
+    <h2>Type scale</h2>
+    <p class="text-body-lg">
+      Celias only, seven weights. Fluid <code>clamp()</code> sizes carry
+      each style from mobile to desktop without a breakpoint override.
+    </p>
+
+    <div class="type-row">
+      <div class="text-display">Marketing is fragmented.</div>
+      <div class="meta"><span>--text-display</span><span>clamp(2.75rem, 7vw+1rem, 6.5rem)</span><span>weight 900</span></div>
+    </div>
+    <div class="type-row">
+      <div class="text-h1">One ecosystem. Endless growth.</div>
+      <div class="meta"><span>--text-h1</span><span>clamp(2.25rem, 5vw+1rem, 4.25rem)</span><span>weight 900</span></div>
+    </div>
+    <div class="type-row">
+      <div class="text-h2">Brands we've transformed</div>
+      <div class="meta"><span>--text-h2</span><span>clamp(1.75rem, 3.5vw+1rem, 3rem)</span><span>weight 900</span></div>
+    </div>
+    <div class="type-row">
+      <div class="text-h3">Talented is not enough</div>
+      <div class="meta"><span>--text-h3</span><span>clamp(1.375rem, 2vw+1rem, 2rem)</span><span>weight 700</span></div>
+    </div>
+    <div class="type-row">
+      <div class="text-h4">Watch the latest episode</div>
+      <div class="meta"><span>--text-h4</span><span>clamp(1.125rem, 1vw+1rem, 1.375rem)</span><span>weight 700</span></div>
+    </div>
+    <div class="type-row">
+      <p class="text-body-lg">For years, brands have built growth through scattered pieces — strategy here, creativity there, technology somewhere else.</p>
+      <div class="meta"><span>--text-body-lg</span><span>clamp(1.0625rem, .5vw+1rem, 1.25rem)</span><span>weight 300</span></div>
+    </div>
+    <div class="type-row">
+      <p>Madverse brings those pieces into one living ecosystem, where ideas connect, capabilities compound, and every move builds toward the next.</p>
+      <div class="meta"><span>--text-body</span><span>1rem fixed</span><span>weight 400</span></div>
+    </div>
+    <div class="type-row">
+      <span class="label">The growth collective</span>
+      <div class="meta"><span>--text-label</span><span>0.75rem</span><span>weight 700, tracking-widest, caps</span></div>
+    </div>
+
+    <h3 style="margin-top: var(--space-12); margin-bottom: var(--space-4);">Weights</h3>
+    <div class="weight-strip">
+      <div class="row"><span class="tagname">100 Hairline</span><span class="fw-hairline" style="font-size: var(--text-h3);">Madverse</span></div>
+      <div class="row"><span class="tagname">200 Thin</span><span class="fw-thin" style="font-size: var(--text-h3);">Madverse</span></div>
+      <div class="row"><span class="tagname">300 Light</span><span class="fw-light" style="font-size: var(--text-h3);">Madverse</span></div>
+      <div class="row"><span class="tagname">400 Regular</span><span class="fw-regular" style="font-size: var(--text-h3);">Madverse</span></div>
+      <div class="row"><span class="tagname">500 Medium</span><span class="fw-medium" style="font-size: var(--text-h3);">Madverse</span></div>
+      <div class="row"><span class="tagname">700 Bold</span><span class="fw-bold" style="font-size: var(--text-h3);">Madverse</span></div>
+      <div class="row"><span class="tagname">900 Black</span><span class="fw-black" style="font-size: var(--text-h3);">Madverse</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ SPACING -->
+<section id="spacing" class="sg-block">
+  <div class="container">
+    <span class="label">03 · Spacing</span>
+    <h2>4px scale &amp; section rhythm</h2>
+    <p class="text-body-lg">
+      Every section uses named vertical rhythm and <code>--gutter-inline</code>
+      for outer padding instead of hand-rolled values — resize the window to
+      see it grow from mobile to desktop.
+    </p>
+
+    <div class="space-strip">
+      <div class="row"><span class="label-name">space-1 · 4</span><div class="bar" style="width: var(--space-1);"></div></div>
+      <div class="row"><span class="label-name">space-2 · 8</span><div class="bar" style="width: var(--space-2);"></div></div>
+      <div class="row"><span class="label-name">space-3 · 12</span><div class="bar" style="width: var(--space-3);"></div></div>
+      <div class="row"><span class="label-name">space-4 · 16</span><div class="bar" style="width: var(--space-4);"></div></div>
+      <div class="row"><span class="label-name">space-6 · 24</span><div class="bar" style="width: var(--space-6);"></div></div>
+      <div class="row"><span class="label-name">space-8 · 32</span><div class="bar" style="width: var(--space-8);"></div></div>
+      <div class="row"><span class="label-name">space-12 · 48</span><div class="bar" style="width: var(--space-12);"></div></div>
+      <div class="row"><span class="label-name">space-16 · 64</span><div class="bar" style="width: var(--space-16);"></div></div>
+      <div class="row"><span class="label-name">space-24 · 96</span><div class="bar" style="width: var(--space-24);"></div></div>
+      <div class="row"><span class="label-name">space-32 · 128</span><div class="bar" style="width: var(--space-32);"></div></div>
+    </div>
+
+    <h3 style="margin-top: var(--space-12); margin-bottom: var(--space-4);">Section rhythm</h3>
+    <div class="section-rhythm-demo">
+      <div class="py-mark">
+        <span class="label">--section-py-tight (both edges dashed in red)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================ RESPONSIVE LAYOUT -->
+<section id="layout" class="sg-block">
+  <div class="container">
+    <span class="label">04 · Responsive layout</span>
+    <h2>One frame, predictable at every width</h2>
+    <p class="text-body-lg measure">
+      Mobile starts with four columns and a 20px safe gutter. The system moves
+      to eight columns on tablet and twelve on desktop, with capped content
+      widths so ultrawide screens do not stretch layouts indefinitely.
+    </p>
+
+    <div class="layout-specs">
+      <div><strong>Mobile</strong><code>0–767 · 4 columns</code></div>
+      <div><strong>Tablet</strong><code>768–1023 · 8 columns</code></div>
+      <div><strong>Desktop</strong><code>1024+ · 12 columns</code></div>
+      <div><strong>Content cap</strong><code>1280px usable width</code></div>
+    </div>
+
+    <div class="layout-grid" aria-label="Responsive column grid preview">
+      <div class="layout-demo__cell">1</div>
+      <div class="layout-demo__cell">2</div>
+      <div class="layout-demo__cell">3</div>
+      <div class="layout-demo__cell">4</div>
+      <div class="layout-demo__cell">5</div>
+      <div class="layout-demo__cell">6</div>
+      <div class="layout-demo__cell">7</div>
+      <div class="layout-demo__cell">8</div>
+      <div class="layout-demo__cell">9</div>
+      <div class="layout-demo__cell">10</div>
+      <div class="layout-demo__cell">11</div>
+      <div class="layout-demo__cell">12</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ BUTTONS -->
+<section id="buttons" class="sg-block">
+  <div class="container">
+    <span class="label">04 · Buttons</span>
+    <h2>CTAs</h2>
+    <p class="text-body-lg">Pill-shaped, uppercase, arrow-suffixed. Three variants for three levels of emphasis.</p>
+
+    <div class="demo-surface--black">
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#">Explore divisions <span class="btn__arrow">→</span></a>
+        <a class="btn btn--outline" href="#">Explore works <span class="btn__arrow">→</span></a>
+        <a class="btn btn--ghost" href="#">Read more <span class="btn__arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ TAGS -->
+<section id="tags" class="sg-block">
+  <div class="container">
+    <span class="label">05 · Tags</span>
+    <h2>Badges &amp; labels</h2>
+    <div class="btn-row">
+      <span class="tag">Campaign</span>
+      <span class="tag">Design</span>
+      <span class="tag tag--red">Featured</span>
+      <span class="tag tag--red">New</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ CARDS -->
+<section id="cards" class="sg-block">
+  <div class="container">
+    <span class="label">06 · Cards</span>
+    <h2>Work cards</h2>
+    <div class="card-row">
+      <div class="card hover-lift">
+        <div class="card__media"><img src="assets/img/work/case-dabur.webp" alt="Dabur campaign"></div>
+        <div class="card__body">
+          <span class="tag tag--red">Campaign</span>
+          <div class="card__title">Dabur — Brand refresh</div>
+          <p class="text-small">Positioning, packaging and a full-funnel launch campaign.</p>
+        </div>
+      </div>
+      <div class="card hover-lift">
+        <div class="card__media"><img src="assets/img/work/case-one8select.webp" alt="One8 Select campaign"></div>
+        <div class="card__body">
+          <span class="tag">Design</span>
+          <div class="card__title">One8 Select</div>
+          <p class="text-small">Identity system and retail rollout.</p>
+        </div>
+      </div>
+      <div class="card hover-lift">
+        <div class="card__media"><img src="assets/img/work/case-aqualite-women.webp" alt="Aqualite Women campaign"></div>
+        <div class="card__body">
+          <span class="tag">Video</span>
+          <div class="card__title">Aqualite Women</div>
+          <p class="text-small">Integrated video and social campaign.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ STATS -->
+<section id="stats" class="sg-block">
+  <div class="container">
+    <span class="label">07 · Stats</span>
+    <h2>Impact blocks</h2>
+    <div class="stat-demo">
+      <div class="stats-grid">
+        <div class="stat"><div class="stat__value">250+</div><div class="stat__label">Brands</div></div>
+        <div class="stat"><div class="stat__value">2,500+</div><div class="stat__label">Projects</div></div>
+        <div class="stat"><div class="stat__value">15+</div><div class="stat__label">Industries</div></div>
+        <div class="stat"><div class="stat__value">500M+</div><div class="stat__label">Consumers reached</div></div>
+        <div class="stat"><div class="stat__value">30+</div><div class="stat__label">Markets</div></div>
+        <div class="stat"><div class="stat__value">10K+</div><div class="stat__label">Creators &amp; talent</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ TABS -->
+<section id="tabs" class="sg-block">
+  <div class="container">
+    <span class="label">08 · Tabs</span>
+    <h2>Filters</h2>
+    <div class="tabs-demo">
+      <div class="tabs">
+        <button class="tab is-active">All</button>
+        <button class="tab">Marketing</button>
+        <button class="tab">Advertising</button>
+        <button class="tab">Design</button>
+        <button class="tab">Technologies</button>
+        <button class="tab">Production</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ LOGOS -->
+<section id="logos" class="sg-block">
+  <div class="container">
+    <span class="label">09 · Logo grid</span>
+    <h2>Brands / collective</h2>
+    <div class="logo-grid-demo">
+      <div class="logo-grid">
+        <img src="assets/img/clients-logo/client-logo-1.png" alt="Client logo">
+        <img src="assets/img/clients-logo/client-logo-2.png" alt="Client logo">
+        <img src="assets/img/clients-logo/client-logo-3.png" alt="Client logo">
+        <img src="assets/img/clients-logo/client-logo-4.png" alt="Client logo">
+        <img src="assets/img/clients-logo/client-logo-5.png" alt="Client logo">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ MOTION -->
+<section id="motion" class="sg-block">
+  <div class="container">
+    <span class="label">10 · Motion</span>
+    <h2>Purposeful and reusable</h2>
+    <p class="text-body-lg measure">
+      Motion belongs to behaviors, not sections. Future content can use the
+      same reveal, stagger, overlay, panel, collapse and track primitives
+      without adding page-specific animation code.
+    </p>
+
+    <div class="layout-specs">
+      <div><strong>Micro</strong><code>180ms · direct feedback</code></div>
+      <div><strong>Standard</strong><code>300ms · UI state change</code></div>
+      <div><strong>Slow</strong><code>500ms · tracks/panels</code></div>
+      <div><strong>Reveal</strong><code>700ms · viewport entrance</code></div>
+    </div>
+
+    <div class="card-row" data-motion-group>
+      <div class="reveal-demo-box" data-motion="reveal" data-motion-variant="fade">Fade</div>
+      <div class="reveal-demo-box" data-motion="reveal">Fade + rise</div>
+      <div class="reveal-demo-box" data-motion="reveal" data-motion-variant="scale">Scale</div>
+    </div>
+  </div>
+</section>
+
+<footer class="section section--black" style="text-align:center;">
+  <span class="text-caption">MADVERSE — Design system v1 · tokens.css / base.css / components.css / animations.css</span>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
