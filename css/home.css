@@ -897,6 +897,7 @@
   position: relative;
   width: min(100%, 37rem);
   margin-inline: auto;
+  touch-action: pan-y;
 }
 
 .testimonial-card.is-preview {
