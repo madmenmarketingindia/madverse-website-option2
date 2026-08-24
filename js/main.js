@@ -32,6 +32,63 @@
     });
   }
 
+  /* Keep the company profile discoverable in every footer and mobile menu. */
+  function ensureCompanyProfileLinks() {
+    var isCompanyProfile = /company-profile\.html$/i.test(window.location.pathname);
+
+    document.querySelectorAll(".site-footer__group").forEach(function (group) {
+      var heading = group.querySelector(".site-footer__heading");
+      var list = group.querySelector(".site-footer__links");
+      if (!heading || !list || heading.textContent.trim().toLowerCase() !== "explore") return;
+      if (list.querySelector('a[href="company-profile.html"]')) return;
+
+      var item = document.createElement("li");
+      var link = document.createElement("a");
+      link.href = "company-profile.html";
+      link.innerHTML = 'Company Profile <span aria-hidden="true">&nearr;</span>';
+      if (isCompanyProfile) link.setAttribute("aria-current", "page");
+      item.appendChild(link);
+
+      var careersLink = list.querySelector('a[href="careers.html"]');
+      list.insertBefore(item, careersLink ? careersLink.parentElement : null);
+    });
+
+    document.querySelectorAll(".site-nav__list").forEach(function (list) {
+      if (list.querySelector('a[href="company-profile.html"]')) return;
+
+      var item = document.createElement("li");
+      var link = document.createElement("a");
+      item.className = "site-nav__company-profile";
+      link.className = "site-nav__link";
+      link.href = "company-profile.html";
+      link.textContent = "Company Profile";
+      if (isCompanyProfile) link.setAttribute("aria-current", "page");
+      item.appendChild(link);
+      list.appendChild(item);
+    });
+  }
+
+  function ensureFooterSocialLinks() {
+    document.querySelectorAll(".site-footer__inner").forEach(function (footer) {
+      if (footer.querySelector(".site-footer__social")) return;
+
+      var social = document.createElement("nav");
+      social.className = "site-footer__social";
+      social.setAttribute("aria-label", "Social media");
+      social.innerHTML = [
+        '<span>Follow Mad Men Marketing</span>',
+        '<div>',
+        '<a href="https://www.instagram.com/madmenmarketingindia/" target="_blank" rel="noopener noreferrer" aria-label="Mad Men Marketing on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.25"></circle><circle cx="17.4" cy="6.7" r="1"></circle></svg></a>',
+        '<a href="https://www.facebook.com/madmenmarketingindia" target="_blank" rel="noopener noreferrer" aria-label="Mad Men Marketing on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 21v-8h2.8l.5-3.2h-3.3V7.7c0-.9.3-1.6 1.7-1.6H18V3.2c-.3 0-1.4-.2-2.6-.2-2.6 0-4.4 1.6-4.4 4.5v2.3H8V13h3v8h3.5z"></path></svg></a>',
+        '<a href="https://www.youtube.com/channel/UCEw7wOvcr2RI026demAf-ww/videos" target="_blank" rel="noopener noreferrer" aria-label="Mad Men Marketing on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.3 7.1a2.8 2.8 0 0 0-2-2C17.6 4.6 12 4.6 12 4.6s-5.6 0-7.3.5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2.2 12a29 29 0 0 0 .5 4.9 2.8 2.8 0 0 0 2 2c1.7.5 7.3.5 7.3.5s5.6 0 7.3-.5a2.8 2.8 0 0 0 2-2 29 29 0 0 0 .5-4.9 29 29 0 0 0-.5-4.9z"></path><path class="site-footer__social-play" d="m10 15.5 5-3.5-5-3.5z"></path></svg></a>',
+        '</div>'
+      ].join("");
+
+      var legal = footer.querySelector(".site-footer__legal");
+      footer.insertBefore(social, legal || null);
+    });
+  }
+
   /* Keep long-form legal pages on the same reveal rhythm as the main site. */
   function enhanceLegalPageMotion() {
     document.querySelectorAll(".legal-content__rail").forEach(function (rail) {
@@ -141,6 +198,8 @@
   }
 
   ensureFooterCareersLink();
+  ensureCompanyProfileLinks();
+  ensureFooterSocialLinks();
   enhanceLegalPageMotion();
   root.classList.add("motion-ready");
   observer = createObserver();

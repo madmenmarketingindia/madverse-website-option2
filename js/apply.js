@@ -92,6 +92,6 @@
     var data = new FormData(form);
     var subject = "Job application — " + data.get("role") + " — " + data.get("name");
     var body = ["Hello Madverse team,", "", "I would like to apply for the " + data.get("role") + " role.", "", "Name: " + data.get("name"), "Email: " + data.get("email"), "Phone: " + data.get("phone"), "Location: " + data.get("location"), "Experience: " + data.get("experience"), "Notice period: " + (data.get("notice") || "Not specified"), "CV / Portfolio: " + data.get("portfolio"), "", "Why Madverse:", data.get("message"), "", "Thank you."];
-    window.location.href = "mailto:hello@madverse.co?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body.join("\n"));
+    window.location.href = "mailto:team@madmen.in?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body.join("\n"));
   });
 })();
