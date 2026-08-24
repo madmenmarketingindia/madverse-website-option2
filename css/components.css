@@ -416,6 +416,7 @@
 .site-nav__list li:nth-child(3) { --nav-index: 3; }
 .site-nav__list li:nth-child(4) { --nav-index: 4; }
 .site-nav__list li:nth-child(5) { --nav-index: 5; }
+.site-nav__list li:nth-child(6) { --nav-index: 6; }
 
 .site-nav__link::after {
   content: "\2197";
@@ -452,6 +453,8 @@
   .site-logo { transform: none; }
 
   .nav-toggle { display: none; }
+
+  .site-nav__company-profile { display: none; }
 
   .site-nav {
     position: static;
