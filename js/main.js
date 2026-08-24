@@ -14,6 +14,24 @@
   var groupSelector = "[data-motion-group], .reveal-group";
   var observed = new WeakSet();
 
+  /* Older compact legal/application footers receive the shared Careers link. */
+  function ensureFooterCareersLink() {
+    document.querySelectorAll(".site-footer__group").forEach(function (group) {
+      var heading = group.querySelector(".site-footer__heading");
+      var list = group.querySelector(".site-footer__links");
+      if (!heading || !list || heading.textContent.trim().toLowerCase() !== "explore") return;
+      if (list.querySelector('a[href="careers.html"]')) return;
+
+      var item = document.createElement("li");
+      var link = document.createElement("a");
+      link.href = "careers.html";
+      link.innerHTML = 'Careers <span aria-hidden="true">&nearr;</span>';
+      if (/(?:careers|apply)\.html$/i.test(window.location.pathname)) link.setAttribute("aria-current", "page");
+      item.appendChild(link);
+      list.appendChild(item);
+    });
+  }
+
   /* Keep long-form legal pages on the same reveal rhythm as the main site. */
   function enhanceLegalPageMotion() {
     document.querySelectorAll(".legal-content__rail").forEach(function (rail) {
@@ -122,6 +140,7 @@
     document.querySelectorAll(targetSelector).forEach(show);
   }
 
+  ensureFooterCareersLink();
   enhanceLegalPageMotion();
   root.classList.add("motion-ready");
   observer = createObserver();
