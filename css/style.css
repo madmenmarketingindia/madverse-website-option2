@@ -3744,8 +3744,20 @@
 }
 
 .think-card {
+  position: relative;
   display: grid;
   background: var(--color-header-bg);
+}
+
+.think-card__link {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+}
+
+.think-card:focus-within {
+  outline: 2px solid var(--color-red-light);
+  outline-offset: 3px;
 }
 
 .think-card figure { overflow: hidden; aspect-ratio: 4 / 3; }
