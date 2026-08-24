@@ -14,6 +14,20 @@
   var groupSelector = "[data-motion-group], .reveal-group";
   var observed = new WeakSet();
 
+  /* Keep long-form legal pages on the same reveal rhythm as the main site. */
+  function enhanceLegalPageMotion() {
+    document.querySelectorAll(".legal-content__rail").forEach(function (rail) {
+      if (!rail.hasAttribute("data-motion")) rail.setAttribute("data-motion", "reveal");
+    });
+
+    document.querySelectorAll(".legal-content__body").forEach(function (body) {
+      if (!body.hasAttribute("data-motion-group")) body.setAttribute("data-motion-group", "");
+      Array.prototype.forEach.call(body.children, function (section) {
+        if (!section.hasAttribute("data-motion")) section.setAttribute("data-motion", "reveal");
+      });
+    });
+  }
+
   function setStaggerIndexes(scope) {
     scope.querySelectorAll(groupSelector).forEach(function (group) {
       Array.prototype.forEach.call(group.children, function (child, index) {
@@ -108,6 +122,7 @@
     document.querySelectorAll(targetSelector).forEach(show);
   }
 
+  enhanceLegalPageMotion();
   root.classList.add("motion-ready");
   observer = createObserver();
   observe(document);
