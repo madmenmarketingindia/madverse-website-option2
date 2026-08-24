@@ -6901,6 +6901,17 @@
   background: var(--color-surface-1);
 }
 
+.work-project__link {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+}
+
+.work-project:focus-within {
+  outline: 2px solid var(--color-red-light);
+  outline-offset: 3px;
+}
+
 .work-project__media {
   position: relative;
   height: auto;
