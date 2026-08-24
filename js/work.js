@@ -9,6 +9,17 @@
   var status = document.querySelector("[data-work-filter-status]");
   var loadMore = document.querySelector("[data-work-load-more]");
   var pageSize = 6;
+
+  cards.forEach(function (card) {
+    if (card.querySelector(".work-project__link")) return;
+
+    var title = card.querySelector("h3");
+    var link = document.createElement("a");
+    link.className = "work-project__link";
+    link.href = "case-study.html";
+    link.setAttribute("aria-label", "View case study: " + (title ? title.textContent.trim() : "project"));
+    card.insertBefore(link, card.firstChild);
+  });
   var isExpanded = false;
 
   function applyFilter(filter) {
