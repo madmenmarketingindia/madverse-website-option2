@@ -397,5 +397,24 @@
     startAutoplay();
   }
 
+  // Temporary Collective lineup compatibility for older compact footer markup.
+  document.querySelectorAll(".site-footer__links").forEach(function (list) {
+    var mecca = Array.from(list.querySelectorAll("a")).find(function (link) {
+      return link.textContent.trim().indexOf("Mecca") === 0;
+    });
+    var madAcad = Array.from(list.querySelectorAll("a")).find(function (link) {
+      return link.textContent.trim().indexOf("Mad Acad") === 0;
+    });
+
+    if (!mecca || !madAcad) return;
+
+    mecca.childNodes[0].nodeValue = "Mad Men Digital ";
+    madAcad.childNodes[0].nodeValue = "Mad Men Hatters ";
+
+    var eniableItem = madAcad.parentElement.cloneNode(true);
+    eniableItem.querySelector("a").childNodes[0].nodeValue = "Mad ENAiBLe ";
+    madAcad.parentElement.after(eniableItem);
+  });
+
   setupTestimonials();
 })();
