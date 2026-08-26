@@ -188,8 +188,20 @@
   .campaign-case--thanda-funda .case-hero__visual { aspect-ratio:1/1; }
   .campaign-case--thanda-funda .case-hero__visual img { object-position:center; }
   .thanda-reels__inner { padding-block:4.25rem; }
-  .thanda-reels__grid { grid-auto-flow:column; grid-auto-columns:88%; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:.75rem; }
-  .thanda-reels__grid a { scroll-snap-align:start; }
+  .thanda-reels__grid {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    overflow-x: visible;
+    padding-bottom: 0;
+    scroll-snap-type: none;
+  }
+  .thanda-reels__grid a { min-width:0; scroll-snap-align:none; }
+  .thanda-reels__grid img {
+    width:100%;
+    height:auto;
+    aspect-ratio:16/9;
+    object-fit:contain;
+  }
 }
 
 /* Work detail: Haldiram's Happy Shappy Holi campaign */
@@ -10080,6 +10092,7 @@
 }
 
 .case-strategy__pillars h3 {
+  grid-column: 2;
   font-size: clamp(1.15rem, 3vw, 1.55rem);
   font-weight: var(--font-black);
   line-height: 1;
@@ -10087,6 +10100,7 @@
 }
 
 .case-strategy__pillars p {
+  grid-column: 2;
   max-width: 27rem;
   margin-top: var(--space-3);
   color: rgba(0, 0, 0, .65);
@@ -19031,7 +19045,15 @@
   .aplus-case--sani-fresh .case-hero__visual figcaption { display:none; }
   .aplus-case--vatika-argan .case-hero__visual { aspect-ratio:1962/1000; }
   .aplus-case--vatika-argan .case-hero__visual figcaption { display:none; }
-  .aplus-showcase__panel > span { position:static; display:block; width:max-content; margin:.75rem 0 0 .75rem; }
+  .aplus-showcase__panel > span {
+    position: absolute;
+    top: .75rem;
+    left: .75rem;
+    display: block;
+    width: max-content;
+    max-width: calc(100% - 1.5rem);
+    margin: 0;
+  }
 }
 
 /* A+ work pages: one shared presentation system based on Amla Brahmi. */
@@ -19081,4 +19103,46 @@
 
   .aplus-case .case-solution__header { margin-bottom: 2.75rem; }
   .aplus-case .aplus-showcase__sequence { gap:1rem; }
+}
+
+/* Work details: preserve complete banner artwork on narrow screens. */
+@media (max-width: 767px) {
+  .case-study-page-shell .case-hero__visual {
+    aspect-ratio: auto;
+  }
+
+  .case-study-page-shell :is(
+    .case-hero__visual,
+    .case-challenge__visual,
+    .case-strategy__visual
+  ) img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .case-study-page-shell :is(
+    .case-challenge__visual,
+    .case-strategy__visual
+  ) {
+    aspect-ratio: auto;
+    margin-inline: 0;
+    padding: 0;
+    line-height: 0;
+  }
+
+  .video-case--english-oven .eo-frames__grid figure:not(.eo-frames__portrait) {
+    aspect-ratio: 4427 / 1322;
+    padding: 0;
+    line-height: 0;
+  }
+
+  .video-case--english-oven .eo-frames__grid figure:not(.eo-frames__portrait) img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
 }
