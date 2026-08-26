@@ -12,6 +12,219 @@
   text-align: center;
 }
 
+/* Work detail: CRAX always-on social */
+.social-case--crax .case-hero__visual { aspect-ratio:1962/801; background:#ef0018; }
+.social-case--crax .case-hero__visual img { width:100%; height:100%; object-fit:cover; object-position:center; }
+.social-case--crax .crax-square { aspect-ratio:1/1; }
+.social-case--crax .crax-square img,.social-case--crax .crax-portrait img { width:100%; height:100%; object-fit:cover; }
+.social-case--crax .crax-portrait { aspect-ratio:3/4; max-width:35rem; justify-self:center; }
+.crax-feed { overflow:hidden; background:#f10018; color:#fff; }
+.crax-feed__inner,.crax-system__inner,.crax-final-grid__inner { padding-block:clamp(4.5rem,9vw,8rem); }
+.crax-feed header,.crax-system header,.crax-final-grid header { display:grid; gap:1.25rem; margin-bottom:clamp(3rem,6vw,5rem); }
+.crax-feed header p,.crax-system header p,.crax-final-grid header p { color:#ffe500; font-size:var(--text-caption); font-weight:var(--font-bold); letter-spacing:var(--tracking-widest); text-transform:uppercase; }
+.crax-feed h2,.crax-system h2,.crax-final-grid h2 { max-width:13em; font-size:clamp(2.35rem,5vw,4.75rem); font-weight:var(--font-black); line-height:.92; letter-spacing:var(--tracking-tighter); text-transform:uppercase; }
+.crax-feed h2 span,.crax-final-grid h2 span { color:#ffe500; }
+.crax-feed__grid { columns:3 16rem; column-gap:1rem; }
+.crax-feed__grid figure { break-inside:avoid; overflow:hidden; margin:0 0 1rem; background:#141414; }
+.crax-feed__grid img { display:block; width:100%; height:auto; transition:transform .5s var(--ease-out); }
+.crax-feed__grid figcaption { padding:.9rem 1rem; color:#fff; font-size:.65rem; font-weight:var(--font-bold); letter-spacing:.08em; text-transform:uppercase; }
+.crax-system { background:#ffe500; color:#050513; }
+.crax-system header p { color:#ef0018; }
+.crax-system h2 span { color:#ef0018; }
+.crax-system__tracks { display:grid; border-top:2px solid #050513; }
+.crax-system__tracks article { padding-block:1.75rem; border-bottom:2px solid #050513; }
+.crax-system__tracks span { color:#ef0018; font-size:.7rem; font-weight:var(--font-bold); }
+.crax-system__tracks h3 { margin-top:2rem; font-size:clamp(1.4rem,2.8vw,2.15rem); font-weight:var(--font-black); line-height:.95; text-transform:uppercase; }
+.crax-system__tracks p { max-width:29rem; margin-top:.9rem; color:rgba(0,0,0,.68); line-height:1.55; }
+.crax-final-grid { background:#050513; color:#fff; }
+.crax-final-grid__inner > div { display:grid; gap:1rem; }
+.crax-final-grid figure { overflow:hidden; margin:0; background:#171724; }
+.crax-final-grid img { display:block; width:100%; aspect-ratio:4/5; object-fit:cover; }
+@media (hover:hover) { .crax-feed__grid figure:hover img { transform:scale(1.02); } }
+@media (min-width:768px) {
+  .crax-system__tracks { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .crax-system__tracks article:nth-child(odd) { padding-right:clamp(2rem,4vw,4rem); border-right:2px solid #050513; }
+  .crax-system__tracks article:nth-child(even) { padding-left:clamp(2rem,4vw,4rem); }
+  .crax-final-grid__inner > div { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:767px) {
+  .social-case--crax .case-hero__visual { aspect-ratio:1/1; }
+  .social-case--crax .case-hero__visual img { object-position:center; }
+  .crax-feed__inner,.crax-system__inner,.crax-final-grid__inner { padding-block:4.25rem; }
+  .crax-feed__grid { columns:2 9rem; column-gap:.75rem; }
+  .crax-feed__grid figure { margin-bottom:.75rem; }
+}
+
+/* Work detail: Dabur Tezpur corporate film */
+.video-case--tezpur .case-hero__visual { aspect-ratio:1962/801; background:#eef2ef; }
+.video-case--tezpur .case-hero__visual img,
+.video-case--tezpur .tezpur-wide img { width:100%; height:100%; object-fit:cover; object-position:center; }
+.video-case--tezpur .tezpur-wide { aspect-ratio:1400/1122; }
+.tezpur-film { overflow:hidden; background:#050513; color:#fff; }
+.tezpur-film__inner { padding-block:clamp(4.5rem,9vw,8rem); }
+.tezpur-film header,.tezpur-scale header,.tezpur-process header { display:grid; gap:1.25rem; margin-bottom:clamp(2.5rem,5vw,4.5rem); }
+.tezpur-film header > p:first-child,.tezpur-scale header p,.tezpur-process header p { color:#f15a24; font-size:var(--text-caption); font-weight:var(--font-bold); letter-spacing:var(--tracking-widest); text-transform:uppercase; }
+.tezpur-film h2,.tezpur-scale h2,.tezpur-process h2 { max-width:13em; font-size:clamp(2.35rem,5vw,4.75rem); font-weight:var(--font-black); line-height:.92; letter-spacing:var(--tracking-tighter); text-transform:uppercase; }
+.tezpur-film h2 span,.tezpur-scale h2 span,.tezpur-process h2 span { color:#138348; }
+.tezpur-film header > p:last-child { max-width:38rem; color:var(--color-text-secondary); font-size:var(--text-body-lg); line-height:1.55; }
+.tezpur-film__frame { overflow:hidden; aspect-ratio:16/9; border:1px solid rgba(255,255,255,.2); background:#000; }
+.tezpur-film__frame iframe { display:block; width:100%; height:100%; border:0; }
+.tezpur-scale { background:#f0f1ec; color:#050513; }
+.tezpur-scale__inner,.tezpur-process__inner { padding-block:clamp(4.5rem,9vw,8rem); }
+.tezpur-scale__numbers { display:grid; border-top:1px solid rgba(0,0,0,.22); }
+.tezpur-scale__numbers article { padding-block:clamp(2rem,4vw,3rem); border-bottom:1px solid rgba(0,0,0,.22); }
+.tezpur-scale__numbers strong { color:#f15a24; font-size:clamp(3.5rem,7vw,6rem); font-weight:var(--font-black); line-height:.85; letter-spacing:var(--tracking-tighter); }
+.tezpur-scale__numbers strong span { margin-left:.25em; color:#138348; font-size:.22em; letter-spacing:.03em; text-transform:uppercase; }
+.tezpur-scale__numbers p { max-width:17rem; margin-top:1.5rem; color:rgba(0,0,0,.62); font-size:.78rem; font-weight:var(--font-bold); line-height:1.5; text-transform:uppercase; }
+.tezpur-process { overflow:hidden; background:#07120d; color:#fff; }
+.tezpur-process__track { counter-reset:tezpur; border-top:1px solid rgba(255,255,255,.18); }
+.tezpur-process__track li { display:grid; grid-template-columns:3rem 1fr; gap:1.25rem; padding-block:1.75rem; border-bottom:1px solid rgba(255,255,255,.18); }
+.tezpur-process__track li > span { color:#f15a24; font-size:.72rem; font-weight:var(--font-bold); }
+.tezpur-process__track h3 { font-size:clamp(1.3rem,2.5vw,2rem); font-weight:var(--font-black); line-height:1; text-transform:uppercase; }
+.tezpur-process__track p { max-width:36rem; margin-top:.75rem; color:rgba(255,255,255,.62); line-height:1.55; }
+@media (min-width:768px) {
+  .tezpur-scale__numbers { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .tezpur-scale__numbers article { padding-right:clamp(1.5rem,4vw,3.5rem); }
+  .tezpur-scale__numbers article + article { padding-left:clamp(1.5rem,4vw,3.5rem); border-left:1px solid rgba(0,0,0,.22); }
+  .tezpur-process__track { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .tezpur-process__track li:nth-child(odd) { padding-right:clamp(2rem,4vw,4rem); border-right:1px solid rgba(255,255,255,.18); }
+  .tezpur-process__track li:nth-child(even) { padding-left:clamp(2rem,4vw,4rem); }
+}
+@media (max-width:767px) {
+  .video-case--tezpur .case-hero__visual { aspect-ratio:1/1; }
+  .video-case--tezpur .case-hero__visual img { object-position:56% center; }
+  .tezpur-film__inner,.tezpur-scale__inner,.tezpur-process__inner { padding-block:4.25rem; }
+}
+
+/* Work detail: English Oven bread campaign film */
+.video-case--english-oven .case-hero__visual { aspect-ratio:1962/801; background:#84252a; }
+.video-case--english-oven .case-hero__visual img,
+.video-case--english-oven .eo-wide img { width:100%; height:100%; object-fit:cover; object-position:center; }
+.video-case--english-oven .eo-wide { aspect-ratio:4427/1322; }
+.eo-film { overflow:hidden; background:#050513; color:#fff; }
+.eo-film__inner { padding-block:clamp(4.5rem,9vw,8rem); }
+.eo-film header { display:grid; gap:1.25rem; margin-bottom:clamp(2.5rem,5vw,4.5rem); }
+.eo-film header > p:first-child,.eo-frames header p { color:#e78b32; font-size:var(--text-caption); font-weight:var(--font-bold); letter-spacing:var(--tracking-widest); text-transform:uppercase; }
+.eo-film h2,.eo-frames h2 { max-width:12em; font-size:clamp(2.35rem,5vw,4.75rem); font-weight:var(--font-black); line-height:.92; letter-spacing:var(--tracking-tighter); text-transform:uppercase; }
+.eo-film h2 span,.eo-frames h2 span { color:#e78b32; }
+.eo-film header > p:last-child { max-width:37rem; color:var(--color-text-secondary); font-size:var(--text-body-lg); line-height:1.55; }
+.eo-film__frame { overflow:hidden; aspect-ratio:16/9; border:1px solid rgba(255,255,255,.2); background:#000; }
+.eo-film__frame iframe { display:block; width:100%; height:100%; border:0; }
+.eo-frames { overflow:hidden; background:#f6ead8; color:#531a1f; }
+.eo-frames__inner { padding-block:clamp(4.5rem,9vw,8rem); }
+.eo-frames header { display:grid; gap:1.25rem; margin-bottom:clamp(3rem,6vw,5rem); }
+.eo-frames__grid { display:grid; gap:1rem; }
+.eo-frames__grid figure { overflow:hidden; margin:0; background:#efe1cc; }
+.eo-frames__grid figure:not(.eo-frames__portrait) { aspect-ratio:4427/1322; }
+.eo-frames__grid img { display:block; width:100%; height:100%; object-fit:cover; }
+.eo-frames__portrait { aspect-ratio:9/16; }
+@media (min-width:768px) {
+  .eo-frames__grid { grid-template-columns:minmax(16rem,.65fr) minmax(0,1.35fr); align-items:start; }
+  .eo-frames__portrait { grid-row:span 3; }
+}
+@media (max-width:767px) {
+  .video-case--english-oven .case-hero__visual { aspect-ratio:1/1; }
+  .video-case--english-oven .case-hero__visual img { object-position:42% center; }
+  .video-case--english-oven .eo-wide { aspect-ratio:16/9; }
+  .eo-film__inner,.eo-frames__inner { padding-block:4.25rem; }
+  .eo-frames__grid figure:not(.eo-frames__portrait) { aspect-ratio:16/9; }
+}
+
+/* Work detail: Dabur Glucose-D Ab Daudega Hindustan campaign */
+.campaign-case--ab-daudega .case-hero__visual { aspect-ratio:1962/801; background:#e9ece8; }
+.campaign-case--ab-daudega .case-hero__visual img,
+.campaign-case--ab-daudega .adh-landscape img { width:100%; height:100%; object-fit:cover; object-position:center; }
+.campaign-case--ab-daudega .adh-landscape { aspect-ratio:16/9; }
+.adh-numbers { background:#eff0eb; color:#050513; }
+.adh-numbers__inner { display:grid; padding-block:clamp(3.5rem,7vw,6rem); border-block:1px solid rgba(0,0,0,.2); }
+.adh-numbers article { display:grid; gap:.75rem; padding-block:1.5rem; }
+.adh-numbers strong { color:#f15a24; font-size:clamp(3.5rem,7vw,6.75rem); font-weight:var(--font-black); line-height:.8; letter-spacing:var(--tracking-tighter); }
+.adh-numbers span { max-width:15rem; font-size:.72rem; font-weight:var(--font-bold); letter-spacing:.07em; line-height:1.45; text-transform:uppercase; }
+.adh-film { overflow:hidden; background:#050513; color:#fff; }
+.adh-film__inner { padding-block:clamp(4.5rem,9vw,8rem); }
+.adh-film header { display:grid; gap:1.25rem; margin-bottom:clamp(2.5rem,5vw,4.5rem); }
+.adh-film header p { color:#f15a24; font-size:var(--text-caption); font-weight:var(--font-bold); letter-spacing:var(--tracking-widest); text-transform:uppercase; }
+.adh-film h2 { max-width:12em; font-size:clamp(2.35rem,5vw,4.75rem); font-weight:var(--font-black); line-height:.92; letter-spacing:var(--tracking-tighter); text-transform:uppercase; }
+.adh-film h2 span { color:#138348; }
+.adh-film__frame { overflow:hidden; aspect-ratio:16/9; border:1px solid rgba(255,255,255,.2); background:#000; }
+.adh-film__frame iframe { display:block; width:100%; height:100%; border:0; }
+.adh-gallery__grid { display:grid; gap:1rem; }
+.adh-gallery__grid figure { overflow:hidden; margin:0; background:#101019; }
+.adh-gallery__grid img { display:block; width:100%; height:100%; object-fit:cover; }
+.adh-gallery__grid figure:not(.adh-gallery__tall) { aspect-ratio:16/9; }
+.adh-gallery__tall { aspect-ratio:1920/6000; }
+@media (min-width:768px) {
+  .adh-numbers__inner { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .adh-numbers article + article { padding-left:clamp(2rem,4vw,4rem); border-left:1px solid rgba(0,0,0,.2); }
+  .adh-gallery__grid { grid-template-columns:repeat(3,minmax(0,1fr)); align-items:start; }
+}
+@media (max-width:767px) {
+  .campaign-case--ab-daudega .case-hero__visual { aspect-ratio:1/1; }
+  .campaign-case--ab-daudega .case-hero__visual img { object-position:58% center; }
+  .adh-numbers__inner { padding-block:3rem; }
+  .adh-numbers article + article { border-top:1px solid rgba(0,0,0,.2); }
+  .adh-film__inner { padding-block:4.25rem; }
+}
+
+/* Work detail: Haldiram's Thanda Funda campaign */
+.campaign-case--thanda-funda .case-hero__visual { aspect-ratio:1959/803; background:#e9ece8; }
+.campaign-case--thanda-funda .case-hero__visual img { width:100%; height:100%; object-fit:cover; object-position:center; }
+.thanda-reels { overflow:hidden; background:#050513; color:#fff; }
+.thanda-reels__inner { padding-block:clamp(4.5rem,9vw,8rem); }
+.thanda-reels__header { display:grid; gap:1.5rem; }
+.thanda-reels__header > p:first-child { color:#f51f2b; font-size:var(--text-caption); font-weight:var(--font-bold); letter-spacing:var(--tracking-widest); text-transform:uppercase; }
+.thanda-reels__header h2 { max-width:12em; font-size:clamp(2.35rem,5vw,4.75rem); font-weight:var(--font-black); line-height:.92; letter-spacing:var(--tracking-tighter); text-transform:uppercase; }
+.thanda-reels__header h2 span { color:#f51f2b; }
+.thanda-reels__header > p:last-child { max-width:37rem; color:var(--color-text-secondary); font-size:var(--text-body-lg); line-height:1.55; }
+.thanda-reels__grid { display:grid; gap:1rem; margin-top:clamp(3rem,6vw,5rem); }
+.thanda-reels__grid a { overflow:hidden; border:1px solid rgba(255,255,255,.18); color:#fff; }
+.thanda-reels__grid img { display:block; width:100%; aspect-ratio:16/9; object-fit:cover; transition:transform .55s var(--ease-out); }
+.thanda-reels__grid span { display:grid; grid-template-columns:auto 1fr auto; gap:.75rem; align-items:center; padding:1rem; font-size:.72rem; font-weight:var(--font-bold); letter-spacing:.06em; text-transform:uppercase; }
+.thanda-reels__grid b { color:#f51f2b; }
+.thanda-reels__grid i { font-size:1rem; font-style:normal; }
+@media (hover:hover) { .thanda-reels__grid a:hover img { transform:scale(1.025); } }
+@media (min-width:768px) { .thanda-reels__grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media (max-width:767px) {
+  .campaign-case--thanda-funda .case-hero__visual { aspect-ratio:1/1; }
+  .campaign-case--thanda-funda .case-hero__visual img { object-position:center; }
+  .thanda-reels__inner { padding-block:4.25rem; }
+  .thanda-reels__grid { grid-auto-flow:column; grid-auto-columns:88%; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:.75rem; }
+  .thanda-reels__grid a { scroll-snap-align:start; }
+}
+
+/* Work detail: Haldiram's Happy Shappy Holi campaign */
+.campaign-case--happy-shappy .case-hero__visual { aspect-ratio:1962/801; background:#ee6424; }
+.campaign-case--happy-shappy .case-hero__visual img,
+.campaign-case--happy-shappy .happy-shappy__landscape img { width:100%; height:100%; object-fit:cover; }
+.campaign-case--happy-shappy .happy-shappy__landscape { aspect-ratio:1962/801; }
+.campaign-case--happy-shappy .happy-shappy__portrait { aspect-ratio:4/5; max-width:34rem; justify-self:center; background:#f5a619; }
+.campaign-case--happy-shappy .happy-shappy__portrait img { width:100%; height:100%; object-fit:cover; }
+.happy-reels { overflow:hidden; background:#f2eadf; color:#050513; }
+.happy-reels__inner { padding-block:clamp(4.5rem,9vw,8rem); }
+.happy-reels__header p { color:#ed1c24; font-size:var(--text-caption); font-weight:var(--font-bold); letter-spacing:var(--tracking-widest); text-transform:uppercase; }
+.happy-reels__header h2 { max-width:12em; margin-top:1.25rem; font-size:clamp(2.35rem,5vw,4.75rem); font-weight:var(--font-black); line-height:.92; letter-spacing:var(--tracking-tighter); text-transform:uppercase; }
+.happy-reels__header h2 span { color:#ed1c24; }
+.happy-reels__grid { display:grid; gap:1rem; margin-top:clamp(3rem,6vw,5rem); }
+.happy-reels__grid a { position:relative; overflow:hidden; background:#050513; color:#fff; }
+.happy-reels__grid img { display:block; width:100%; aspect-ratio:4/5; object-fit:cover; transition:transform .55s var(--ease-out); }
+.happy-reels__grid span { display:grid; grid-template-columns:auto 1fr auto; gap:.75rem; align-items:center; padding:1rem; font-size:.72rem; font-weight:var(--font-bold); letter-spacing:.06em; text-transform:uppercase; }
+.happy-reels__grid b { color:#ff2636; }
+.happy-reels__grid i { font-size:1rem; font-style:normal; }
+.happy-gallery__grid { display:grid; gap:1rem; }
+.happy-gallery__grid figure { overflow:hidden; margin:0; background:#171724; }
+.happy-gallery__grid img { display:block; width:100%; aspect-ratio:4/5; object-fit:cover; }
+@media (hover:hover) { .happy-reels__grid a:hover img { transform:scale(1.025); } }
+@media (min-width:768px) { .happy-reels__grid,.happy-gallery__grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media (max-width:767px) {
+  .campaign-case--happy-shappy .case-hero__visual { aspect-ratio:1/1; }
+  .campaign-case--happy-shappy .case-hero__visual img { object-position:center; }
+  .campaign-case--happy-shappy .happy-shappy__landscape { aspect-ratio:1/1; }
+  .campaign-case--happy-shappy .happy-shappy__landscape img { object-position:center; }
+  .happy-reels__inner { padding-block:4.25rem; }
+  .happy-reels__grid { grid-auto-flow:column; grid-auto-columns:82%; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:.75rem; }
+  .happy-reels__grid a { scroll-snap-align:start; }
+}
+
 /* ========================================================================== 
    CASE STUDY V2 — ALTERNATIVE EDITORIAL EXPERIENCE
    ========================================================================== */
@@ -18698,4 +18911,174 @@
   .legal-page .legal-content__body p + p,
   .legal-page .legal-content__body ul { margin-top: 1.25rem; }
   .legal-page .legal-content__note { padding: 1.25rem; }
+}
+
+/* Work detail: Dabur Gulabari A+ content */
+.aplus-case--gulabari .case-hero__visual { background:#f7d2c1; }
+.aplus-case--gulabari .case-hero__visual img { width:100%; height:100%; object-fit:cover; object-position:center; }
+.aplus-case--gulabari .case-challenge__visual,
+.aplus-case--gulabari .case-strategy__visual { aspect-ratio:4042/2500; background:#f7d8c9; }
+.aplus-case--gulabari .case-challenge__visual img,
+.aplus-case--gulabari .case-strategy__visual img { object-fit:contain; }
+
+/* Work detail: Dabur Brahmi Amla A+ content */
+.aplus-case--amla-brahmi .case-hero__visual { background:#0d321e; }
+.aplus-case--amla-brahmi .case-hero__visual img { width:100%; height:100%; object-fit:cover; object-position:center; }
+.aplus-case--amla-brahmi .case-challenge__visual,
+.aplus-case--amla-brahmi .case-strategy__visual { aspect-ratio:4042/2500; background:#102f20; }
+.aplus-case--amla-brahmi .case-challenge__visual img,
+.aplus-case--amla-brahmi .case-strategy__visual img { object-fit:contain; }
+.aplus-case--amla-brahmi .aplus-showcase__panel { background:#102f20; }
+.aplus-case--badam-amla .case-hero__visual { background:#405b24; }
+.aplus-case--badam-amla .case-hero__visual img { width:100%; height:100%; object-fit:cover; object-position:center; }
+.aplus-case--badam-amla .case-challenge__visual,
+.aplus-case--badam-amla .case-strategy__visual { aspect-ratio:4042/2500; background:#e6dfc6; }
+.aplus-case--badam-amla .case-challenge__visual img,
+.aplus-case--badam-amla .case-strategy__visual img { object-fit:contain; }
+.aplus-case--badam-amla .aplus-showcase__panel { background:#e6dfc6; }
+.aplus-case--dabur-almond .case-hero__visual { background:#f5c34a; }
+.aplus-case--dabur-almond .case-hero__visual img { width:100%; height:100%; object-fit:cover; object-position:center; }
+.aplus-case--dabur-almond .case-challenge__visual,
+.aplus-case--dabur-almond .case-strategy__visual { aspect-ratio:970/600; background:#f4c45d; }
+.aplus-case--dabur-almond .case-challenge__visual img,
+.aplus-case--dabur-almond .case-strategy__visual img { object-fit:contain; }
+.aplus-case--dabur-almond .aplus-showcase__panel { background:#1a090b; }
+.aplus-case--dabur-almond .aplus-showcase__panel img { aspect-ratio:970/600; }
+.aplus-case--hajmola-anardana .case-hero__visual { background:#6f190d; }
+.aplus-case--hajmola-anardana .case-hero__visual img { width:100%; height:100%; object-fit:cover; object-position:center; }
+.aplus-case--hajmola-anardana .case-challenge__visual,
+.aplus-case--hajmola-anardana .case-strategy__visual { aspect-ratio:4042/2501; background:#5c1d13; }
+.aplus-case--hajmola-anardana .case-challenge__visual img,
+.aplus-case--hajmola-anardana .case-strategy__visual img { object-fit:contain; }
+.aplus-case--hajmola-anardana .aplus-showcase__panel { background:#8c160d; }
+.aplus-case--hajmola-anardana .aplus-showcase__panel img { aspect-ratio:4042/2501; }
+.aplus-case--hajmola-pudina .case-hero__visual { background:#073c24; }
+.aplus-case--hajmola-pudina .case-hero__visual img { width:100%; height:100%; object-fit:cover; object-position:center; }
+.aplus-case--hajmola-pudina .case-challenge__visual,
+.aplus-case--hajmola-pudina .case-strategy__visual { aspect-ratio:4043/2500; background:#174b2f; }
+.aplus-case--hajmola-pudina .case-challenge__visual img,
+.aplus-case--hajmola-pudina .case-strategy__visual img { object-fit:contain; }
+.aplus-case--hajmola-pudina .aplus-showcase__panel { background:#0b4027; }
+.aplus-case--hajmola-pudina .aplus-showcase__panel img { aspect-ratio:4043/2500; }
+.aplus-case--odomos-cream .case-hero__visual { background:#063d64; }
+.aplus-case--odomos-cream .case-hero__visual img { width:100%; height:100%; object-fit:cover; object-position:center; }
+.aplus-case--odomos-cream .case-challenge__visual,
+.aplus-case--odomos-cream .case-strategy__visual { aspect-ratio:4042/2500; background:#08395a; }
+.aplus-case--odomos-cream .case-challenge__visual img,
+.aplus-case--odomos-cream .case-strategy__visual img { object-fit:contain; }
+.aplus-case--odomos-cream .aplus-showcase__panel { background:#063856; }
+.aplus-case--odomos-cream .aplus-showcase__panel img { aspect-ratio:4042/2500; }
+.aplus-case--odomos-vaporiser .case-hero__visual { background:#052e55; aspect-ratio:4042/2500; }
+.aplus-case--odomos-vaporiser .case-hero__visual img { width:100%; height:100%; object-fit:contain; object-position:center; }
+.aplus-case--odomos-vaporiser .case-challenge__visual,
+.aplus-case--odomos-vaporiser .case-strategy__visual { aspect-ratio:4042/2500; background:#062f52; }
+.aplus-case--odomos-vaporiser .case-challenge__visual img,
+.aplus-case--odomos-vaporiser .case-strategy__visual img { object-fit:contain; }
+.aplus-case--odomos-vaporiser .aplus-showcase__panel { background:#0b4778; }
+.aplus-case--odomos-vaporiser .aplus-showcase__panel img { aspect-ratio:4042/2500; }
+@media (min-width:900px) { .aplus-showcase__sequence--single { grid-template-columns:1fr; } }
+.aplus-case--sani-fresh .case-hero__visual { background:#eef0f2; }
+.aplus-case--sani-fresh .case-hero__visual img { width:100%; height:100%; object-fit:cover; object-position:center; }
+.aplus-case--sani-fresh .case-challenge__visual,
+.aplus-case--sani-fresh .case-strategy__visual { aspect-ratio:24/7; background:#f4f4f4; }
+.aplus-case--sani-fresh .case-challenge__visual img,
+.aplus-case--sani-fresh .case-strategy__visual img { object-fit:contain; }
+.aplus-case--sani-fresh .aplus-showcase__sequence--wide { grid-template-columns:1fr; }
+.aplus-case--sani-fresh .aplus-showcase__panel { background:#f4f4f4; }
+.aplus-case--sani-fresh .aplus-showcase__panel img { aspect-ratio:24/7; }
+.aplus-case--vatika-argan .case-hero__visual { background:#fff; }
+.aplus-case--vatika-argan .case-hero__visual img { width:100%; height:100%; object-fit:cover; object-position:center; }
+.aplus-case--vatika-argan .case-challenge__visual,
+.aplus-case--vatika-argan .case-strategy__visual { aspect-ratio:4042/2500; background:#fff; }
+.aplus-case--vatika-argan .case-challenge__visual img,
+.aplus-case--vatika-argan .case-strategy__visual img { object-fit:contain; }
+.aplus-case--vatika-argan .aplus-showcase__panel { background:#fff; }
+.aplus-case--vatika-argan .aplus-showcase__panel img { aspect-ratio:4042/2500; }
+
+.aplus-showcase__sequence { display:grid; gap:clamp(1rem,2vw,1.75rem); }
+.aplus-showcase__panel { position:relative; margin:0; overflow:hidden; border:1px solid rgba(255,255,255,.16); background:#f7d8c9; }
+.aplus-showcase__panel > span { position:absolute; top:clamp(.75rem,1.5vw,1.25rem); left:clamp(.75rem,1.5vw,1.25rem); z-index:1; padding:.55rem .7rem; background:rgba(5,5,19,.9); color:#fff; font-size:.58rem; font-weight:var(--font-bold); letter-spacing:.08em; text-transform:uppercase; }
+.aplus-showcase__panel img { display:block; width:100%; height:auto; aspect-ratio:4042/2500; object-fit:contain; transition:transform .6s var(--ease-out); }
+
+@media (hover:hover) {
+  .aplus-showcase__panel:hover img { transform:scale(1.012); }
+}
+
+@media (min-width:900px) {
+  .aplus-showcase__sequence { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .aplus-showcase__panel:first-child { grid-column:1/-1; }
+  .aplus-showcase__sequence--duo .aplus-showcase__panel:first-child { grid-column:auto; }
+}
+
+@media (max-width:767px) {
+  .aplus-case--gulabari .case-hero__visual { aspect-ratio:1962/1000; }
+  .aplus-case--gulabari .case-hero__visual figcaption { display:none; }
+  .aplus-case--amla-brahmi .case-hero__visual { aspect-ratio:1962/1000; }
+  .aplus-case--amla-brahmi .case-hero__visual figcaption { display:none; }
+  .aplus-case--badam-amla .case-hero__visual { aspect-ratio:1962/1000; }
+  .aplus-case--badam-amla .case-hero__visual figcaption { display:none; }
+  .aplus-case--dabur-almond .case-hero__visual { aspect-ratio:1962/1000; }
+  .aplus-case--dabur-almond .case-hero__visual figcaption { display:none; }
+  .aplus-case--hajmola-anardana .case-hero__visual { aspect-ratio:1962/1000; }
+  .aplus-case--hajmola-anardana .case-hero__visual figcaption { display:none; }
+  .aplus-case--hajmola-pudina .case-hero__visual { aspect-ratio:1962/1000; }
+  .aplus-case--hajmola-pudina .case-hero__visual figcaption { display:none; }
+  .aplus-case--odomos-cream .case-hero__visual { aspect-ratio:1962/1000; }
+  .aplus-case--odomos-cream .case-hero__visual figcaption { display:none; }
+  .aplus-case--odomos-vaporiser .case-hero__visual { aspect-ratio:4042/2500; }
+  .aplus-case--odomos-vaporiser .case-hero__visual figcaption { display:none; }
+  .aplus-case--sani-fresh .case-hero__visual { aspect-ratio:1959/900; }
+  .aplus-case--sani-fresh .case-hero__visual figcaption { display:none; }
+  .aplus-case--vatika-argan .case-hero__visual { aspect-ratio:1962/1000; }
+  .aplus-case--vatika-argan .case-hero__visual figcaption { display:none; }
+  .aplus-showcase__panel > span { position:static; display:block; width:max-content; margin:.75rem 0 0 .75rem; }
+}
+
+/* A+ work pages: one shared presentation system based on Amla Brahmi. */
+@media (min-width: 768px) {
+  .aplus-case .case-overview__inner,
+  .aplus-case .case-challenge__inner,
+  .aplus-case .case-strategy__inner,
+  .aplus-case .case-solution__inner,
+  .aplus-case .case-impact__inner,
+  .aplus-case .case-next__inner {
+    padding-block: clamp(6rem, 7.5vw, 7.5rem);
+  }
+
+  .aplus-case :is(
+    .case-challenge__header,
+    .case-strategy__header,
+    .case-solution__header,
+    .case-impact__header
+  ) h2 {
+    font-size: clamp(3.25rem, 4.5vw, 4.5rem);
+    line-height: .94;
+  }
+
+  .aplus-case .case-solution__header { margin-bottom: clamp(3.5rem, 5vw, 5rem); }
+  .aplus-case .aplus-showcase__sequence { width:min(100%, 68rem); margin-inline:auto; }
+}
+
+@media (max-width: 767px) {
+  .aplus-case .case-overview__inner,
+  .aplus-case .case-challenge__inner,
+  .aplus-case .case-strategy__inner,
+  .aplus-case .case-solution__inner,
+  .aplus-case .case-impact__inner,
+  .aplus-case .case-next__inner {
+    padding-block: 4.25rem;
+  }
+
+  .aplus-case :is(
+    .case-challenge__header,
+    .case-strategy__header,
+    .case-solution__header,
+    .case-impact__header
+  ) h2 {
+    font-size: clamp(2.25rem, 11vw, 3.25rem);
+    line-height: .94;
+  }
+
+  .aplus-case .case-solution__header { margin-bottom: 2.75rem; }
+  .aplus-case .aplus-showcase__sequence { gap:1rem; }
 }
