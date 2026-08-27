@@ -20276,6 +20276,10 @@
 
 /* Happy Shappy Diwali */
 .campaign-case--diwali .case-hero__visual img { object-fit:contain; object-position:center; }
+@media(min-width:768px){
+  .campaign-case--diwali .happy-shappy__landscape { aspect-ratio:auto; background:#050513; }
+  .campaign-case--diwali .happy-shappy__landscape img { height:auto; object-fit:contain; object-position:center; }
+}
 .diwali-reels { grid-template-columns:repeat(3,minmax(0,1fr)); }
 .diwali-reels img { object-fit:cover; }
 .diwali-gallery { display:grid; gap:clamp(1.5rem,3vw,2.5rem); margin-top:clamp(3rem,6vw,5rem); }
