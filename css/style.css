@@ -23811,7 +23811,7 @@
 .strategy-service__outcomes-grid article:last-child { border-right:0; }
 .strategy-service__outcomes-grid span { color:#050513; font-size:.67rem; font-weight:900; letter-spacing:.12em; text-transform:uppercase; }
 .strategy-service__outcomes-grid h3 { margin:auto 0 1rem; font-size:clamp(1.65rem,2.4vw,2.75rem); line-height:.94; letter-spacing:-.045em; text-transform:uppercase; }
-.strategy-service__outcomes-grid p { margin:0; line-height:1.55; }
+.strategy-service__outcomes-grid p { margin:0; color:rgba(255,255,255,.94); font-weight:600; line-height:1.6; }
 @media(max-width:900px){
   .strategy-service__outcomes-head { grid-template-columns:1fr; gap:1.5rem; }
   .strategy-service__outcomes-head>p:first-child,.strategy-service__outcomes-head h2,.strategy-service__outcomes-head>p:last-child { grid-column:auto; grid-row:auto; }
