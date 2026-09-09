@@ -8433,26 +8433,32 @@
   font-size: clamp(1.35rem, 3vw, 1.85rem);
   font-weight: var(--font-black);
   text-transform: uppercase;
+  text-align: center;
 }
 
 .collective-company p {
   max-width: 25rem;
   margin-top: var(--space-2);
+  margin-inline: auto;
+  text-align: center;
   color: var(--color-text-secondary);
   font-size: var(--text-small);
   line-height: 1.5;
 }
 
 .collective-company > a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: var(--space-4);
-  border-top: 1px solid rgba(255, 255, 255, .16);
-  color: var(--color-text-primary);
-  font-size: var(--text-small);
-  font-weight: var(--font-bold);
-  text-transform: uppercase;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: block;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.collective-company > a:focus-visible {
+  outline: 2px solid var(--color-red-light);
+  outline-offset: -4px;
 }
 
 @media (hover: hover) {
@@ -8471,6 +8477,30 @@
   .collective-company,
   .collective-company:nth-child(odd) { border-right: 1px solid rgba(255, 255, 255, .16); }
   .collective-company:nth-child(3n) { border-right: 0; }
+}
+
+
+/* Slightly tighter specialist cards on desktop only. */
+@media (min-width: 1024px) {
+  .collective-companies__grid .collective-company {
+    min-height: 22rem;
+    padding: 1.75rem;
+    gap: 1.25rem;
+  }
+  .collective-company > img {
+    width: min(60%, 9.5rem);
+    max-height: 7rem;
+  }
+  .collective-company h3 {
+    font-size: 1.625rem;
+    line-height: 1.15;
+  }
+  .collective-company p {
+    font-size: .875rem;
+    line-height: 1.55;
+  }
+  .collective-company__wordmark strong { font-size: 2.4rem; }
+  .collective-company__wordmark span { font-size: 1.4rem; }
 }
 
 /* Collective: Process */
