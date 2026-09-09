@@ -1,6 +1,0 @@
-/* Keep the desktop heading responsive after the shared 5rem heading rule. */
-@media (min-width: 1024px) {
-  .culture-hero .culture-hero__title {
-    font-size: clamp(3rem, min(5.6vw, 9vh), 5rem);
-  }
-}

@@ -1,0 +1,37 @@
+/* Content-led desktop cards; hero and mobile rules are unchanged. */
+@media (min-width: 1024px) {
+  .technology-service__problems,
+  .technology-service__build { padding-block: clamp(4rem, 6vw, 6rem); }
+  .technology-service__problems-head,
+  .technology-service__build-head { margin-bottom: clamp(2.5rem, 4vw, 4rem); }
+  .technology-service__problem-grid,
+  .technology-service__build-grid { align-items: stretch; }
+  .technology-service__problem-grid article,
+  .technology-service__build-grid article {
+    min-width: 0;
+    min-height: 0;
+    padding: clamp(1.5rem, 2vw, 2rem);
+  }
+  .technology-service__problem-grid article > p:first-of-type {
+    min-height: 2.8em;
+    margin: 1.75rem 0 .75rem;
+    line-height: 1.4;
+  }
+  .technology-service__problem-grid h3 {
+    max-width: 100%;
+    min-height: 3.15em;
+    font-size: clamp(1.65rem, 2.25vw, 2.5rem);
+    line-height: 1.05;
+  }
+  .technology-service__problem-grid article > p:last-of-type {
+    margin: 1.25rem 0 1.5rem;
+  }
+  .technology-service__build-grid h3 {
+    max-width: 100%;
+    min-height: 3.15em;
+    margin: 1.75rem 0 1rem;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    line-height: 1.05;
+  }
+  .technology-service__build-grid article > p { margin-bottom: 1.5rem; }
+}

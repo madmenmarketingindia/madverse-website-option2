@@ -10,27 +10,6 @@
     margin-bottom: 0;
   }
   .work-page-shell .work-project__category { font-size: .6875rem; line-height: 1.4; }
-  .culture-page-shell .culture-hero__visual {
-    height: auto;
-    aspect-ratio: 1721 / 914;
-    margin: 0;
-  }
-  .culture-page-shell .culture-hero__visual > img {
-    display: block;
-    object-fit: contain;
-    object-position: center;
-  }
-  .culture-page-shell .culture-hero__visual figcaption {
-    inset-inline: .75rem;
-    bottom: .75rem;
-    font-size: .625rem;
-    letter-spacing: .04em;
-    padding: .375rem .5rem;
-    background: rgba(5, 5, 19, .85);
-    color: #fff;
-  }
-  .culture-page-shell .culture-life__note p,
-  .culture-page-shell .culture-careers__cta p { color: #fff; }
   .think-page-shell .think-card--text .think-card__body { min-height: 0; }
   .think-page-shell .think-card--text blockquote { margin-block: 0; padding-block: 1.5rem; }
   .hatters-page-shell .hatters-format,

@@ -1,0 +1,46 @@
+/* Preserve the editorial spans while removing excess desktop card height. */
+@media (min-width: 1024px) {
+  .hatters-formats__wall,
+  .hatters-voice__manual { align-items: stretch; }
+  .hatters-formats__wall .hatters-format {
+    min-width: 0;
+    min-height: 0;
+    gap: 1.5rem;
+    padding: clamp(1.5rem, 2vw, 2rem);
+  }
+  .hatters-formats__wall .hatters-format--website { padding: 0; gap: 0; }
+  .hatters-format__chrome { flex-shrink: 0; }
+  .hatters-formats__wall .hatters-format__body {
+    min-width: 0;
+    min-height: 0;
+    flex: 1;
+    gap: 1.5rem;
+    padding: clamp(1.5rem, 2vw, 2rem);
+  }
+  .hatters-formats__wall .hatters-format h3 { line-height: 1.05; }
+  .hatters-formats__wall .hatters-format__body h3 {
+    max-width: 100%;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+  }
+  .hatters-formats__wall .hatters-format--campaign h3 {
+    font-size: clamp(2rem, 3vw, 3rem);
+  }
+  .hatters-voice__manual article {
+    min-width: 0;
+    min-height: 0;
+    padding: clamp(1.5rem, 2vw, 2rem);
+  }
+  /* Override explicit important minimums on the two full-width panels. */
+  .hatters-voice__manual .hatters-voice__cover,
+  .hatters-voice__manual .hatters-voice__framework { min-height: 0 !important; }
+  .hatters-voice__manual .hatters-voice__cover {
+    grid-template-columns: minmax(0, .45fr) minmax(0, 1fr) minmax(0, .55fr);
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .hatters-voice__cover > strong { line-height: .95; }
+  .hatters-voice__manual .hatters-voice__cover > p { align-self: center; }
+  .hatters-voice__label { min-height: 2.75rem; gap: .75rem; }
+  .hatters-voice__label h3 { line-height: 1.15; }
+  .hatters-voice__tone { gap: 1.5rem; }
+}
