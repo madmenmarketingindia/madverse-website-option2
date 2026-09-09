@@ -184,6 +184,10 @@
 
 .culture-life__copy p + p { margin-top: var(--space-5); }
 
+.culture-life__copy > p:not(.culture-life__lead) {
+  color: #454550;
+}
+
 .culture-life__lead {
   color: var(--color-black);
   font-size: clamp(1.2rem, 2.5vw, 1.5rem);
@@ -371,6 +375,11 @@
 }
 
 .culture-careers__intro p + p { margin-top: var(--space-5); }
+
+.culture-careers__intro > p:not(.culture-careers__lead) {
+  color: #454550;
+  line-height: 1.65;
+}
 
 .culture-careers__lead {
   color: var(--color-black);
@@ -588,4 +597,3 @@
   .culture-page-shell .culture-life__note p,
   .culture-page-shell .culture-careers__cta p { color: #fff; }
 }
-
