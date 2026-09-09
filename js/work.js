@@ -10,6 +10,21 @@
   var loadMore = document.querySelector("[data-work-load-more]");
   var grid = document.querySelector("[data-work-grid]");
   var pageSize = 6;
+  var storageKey = "madverse.work.browsing.v1";
+  var savedState = null;
+  var restoringScroll = false;
+
+  try {
+    savedState = JSON.parse(window.sessionStorage.getItem(storageKey));
+  } catch (error) {
+    // Private browsing or unavailable storage must not break project filters.
+  }
+  if (!savedState || !buttons.some(function (button) {
+    return button.dataset.workFilter === savedState.filter;
+  }) || !Number.isFinite(savedState.additionalVisible) || savedState.additionalVisible < 0 ||
+      !Number.isFinite(savedState.scrollY) || savedState.scrollY < 0) {
+    savedState = null;
+  }
 
   // Assign each project to one bucket so multi-category cards appear only once.
   var categories = buttons.map(function (button) {
@@ -49,7 +64,30 @@
     link.setAttribute("aria-label", "View case study: " + (title ? title.textContent.trim() : "project"));
     card.insertBefore(link, card.firstChild);
   });
-  var additionalVisible = 0;
+  var additionalVisible = savedState
+    ? Math.min(Math.floor(savedState.additionalVisible / pageSize) * pageSize, cards.length)
+    : 0;
+
+  function saveState() {
+    if (restoringScroll) return;
+    try {
+      window.sessionStorage.setItem(storageKey, JSON.stringify({
+        filter: filters.dataset.activeFilter || "all",
+        additionalVisible: additionalVisible,
+        scrollY: window.scrollY
+      }));
+    } catch (error) {
+      // Browsing remains functional even if saving is blocked.
+    }
+  }
+
+  function syncButtons(filter) {
+    buttons.forEach(function (button) {
+      var selected = button.dataset.workFilter === filter;
+      button.classList.toggle("is-active", selected);
+      button.setAttribute("aria-pressed", String(selected));
+    });
+  }
 
   function applyFilter(filter) {
     var orderedCards = filter === "all" ? mixedCards : cards;
@@ -90,15 +128,12 @@
     var selected = event.target.closest("[data-work-filter]");
     if (!selected || !filters.contains(selected)) return;
 
-    buttons.forEach(function (button) {
-      var isSelected = button === selected;
-      button.classList.toggle("is-active", isSelected);
-      button.setAttribute("aria-pressed", String(isSelected));
-    });
-
+    restoringScroll = false;
+    syncButtons(selected.dataset.workFilter);
     filters.dataset.activeFilter = selected.dataset.workFilter;
     additionalVisible = 0;
     applyFilter(selected.dataset.workFilter);
+    saveState();
     filters.dispatchEvent(new CustomEvent("workfilterchange", {
       bubbles: true,
       detail: { filter: selected.dataset.workFilter }
@@ -107,11 +142,44 @@
 
   if (loadMore) {
     loadMore.addEventListener("click", function () {
+      restoringScroll = false;
       additionalVisible += pageSize;
       applyFilter(filters.dataset.activeFilter || "all");
+      saveState();
     });
   }
 
-  filters.dataset.activeFilter = "all";
-  applyFilter("all");
+  filters.dataset.activeFilter = savedState ? savedState.filter : "all";
+  syncButtons(filters.dataset.activeFilter);
+  applyFilter(filters.dataset.activeFilter);
+
+  // Rebuild the visible list before restoring scroll. Explicit anchor links win.
+  restoringScroll = !!savedState && !window.location.hash;
+  function restoreScroll() {
+    if (!restoringScroll) return;
+    window.requestAnimationFrame(function () {
+      window.requestAnimationFrame(function () {
+        if (!restoringScroll) return;
+        var root = document.documentElement;
+        var previousBehavior = root.style.scrollBehavior;
+        root.style.scrollBehavior = "auto";
+        window.scrollTo({ top: savedState.scrollY, left: 0, behavior: "instant" });
+        root.style.scrollBehavior = previousBehavior;
+        restoringScroll = false;
+      });
+    });
+  }
+  window.addEventListener("pageshow", function (event) {
+    // A back/forward-cache return already preserves the live DOM and position.
+    if (event.persisted) { restoringScroll = false; return; }
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(restoreScroll, restoreScroll);
+    } else restoreScroll();
+  });
+  // Never pull the visitor back after they have started interacting.
+  ["wheel", "touchstart", "pointerdown", "keydown"].forEach(function (type) {
+    window.addEventListener(type, function () { restoringScroll = false; }, { passive: true });
+  });
+  window.addEventListener("pagehide", saveState);
+  if (grid) grid.addEventListener("click", saveState);
 })();

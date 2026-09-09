@@ -1,0 +1,591 @@
+/* Culture page layout. Shared typography and controls remain in style.css. */
+.culture-hero {
+  overflow: hidden;
+  background: var(--color-header-bg);
+  color: var(--color-text-primary);
+}
+
+.culture-hero__inner {
+  display: grid;
+  gap: clamp(2rem, 6vw, 4rem);
+  padding-top: clamp(1rem, 3vw, 2rem);
+  padding-bottom: clamp(2rem, 6vw, 4rem);
+}
+
+.culture-hero__content { position: relative; z-index: 2; }
+
+.culture-hero__eyebrow {
+  margin-bottom: var(--space-5);
+  color: var(--color-red-light);
+  font-size: var(--text-caption);
+  font-weight: var(--font-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+}
+
+.culture-hero__title {
+  font-size: clamp(2.75rem, 12vw, 5.5rem);
+  font-weight: var(--font-black);
+  line-height: .86;
+  letter-spacing: var(--tracking-tighter);
+  text-transform: uppercase;
+}
+
+.culture-hero__title span { color: var(--color-red-light); }
+
+.culture-hero__intro {
+  max-width: 34rem;
+  margin-top: clamp(1.5rem, 5vw, 2.75rem);
+  color: var(--color-text-secondary);
+  font-size: clamp(1rem, 3.6vw, 1.18rem);
+  line-height: 1.55;
+}
+
+.culture-hero__link {
+  display: flex;
+  width: min(100%, 19rem);
+  min-height: 3.75rem;
+  margin-top: clamp(1.75rem, 5vw, 3rem);
+  padding: var(--space-4) var(--space-5);
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  background: var(--color-red);
+  color: var(--color-text-primary);
+  font-size: var(--text-small);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  transition: background-color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.culture-hero__link img { width: 2.4rem; height: auto; }
+
+.culture-hero__visual {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: var(--color-black);
+}
+
+.culture-hero__visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(5, 5, 19, .48), transparent 42%);
+  pointer-events: none;
+}
+
+.culture-hero__visual > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 66% center;
+}
+
+.culture-hero__visual figcaption {
+  position: absolute;
+  z-index: 1;
+  right: var(--space-4);
+  bottom: var(--space-4);
+  left: var(--space-4);
+  color: rgba(255, 255, 255, .78);
+  font-size: var(--text-caption);
+  font-weight: var(--font-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+}
+
+@media (hover: hover) {
+  .culture-hero__link:hover { background: var(--color-red-light); transform: translateY(-2px); }
+}
+
+@media (max-width: 767px) {
+  .culture-hero__content { max-width: 24rem; margin-inline: auto; text-align: center; }
+  .culture-hero__intro,
+  .culture-hero__link { margin-inline: auto; }
+}
+
+@media (min-width: 1024px) {
+  .culture-hero__inner {
+    position: relative;
+    min-height: calc(100svh - var(--header-height));
+    display: flex;
+    padding-block: 0;
+    align-items: center;
+  }
+
+  .culture-hero__content { width: min(42%, 34rem); padding-block: var(--space-8); }
+
+  .culture-hero__title { font-size: clamp(4rem, 5.6vw, 6rem); }
+
+  .culture-hero__visual {
+    position: absolute;
+    inset-block: 0;
+    right: 0;
+    width: min(72vw, 68rem);
+    aspect-ratio: auto;
+  }
+
+  .culture-hero__visual::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background: linear-gradient(90deg, var(--color-header-bg) 0%, rgba(5, 5, 19, .86) 13%, transparent 48%);
+    pointer-events: none;
+  }
+
+  .culture-hero__visual > img { object-position: center; }
+  .culture-hero__visual figcaption { left: auto; }
+}
+
+/* Culture: Life at Madverse */
+
+.culture-life {
+  overflow: hidden;
+  background: var(--color-off-white);
+  color: var(--color-black);
+}
+
+.culture-life__inner {
+  display: grid;
+  gap: clamp(2.5rem, 7vw, 5.5rem);
+  padding-block: clamp(4.5rem, 10vw, 8rem);
+}
+
+.culture-life__eyebrow {
+  margin-bottom: var(--space-5);
+  color: var(--color-red);
+  font-size: var(--text-caption);
+  font-weight: var(--font-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+}
+
+.culture-life__header h2 {
+  font-size: clamp(2.35rem, 7vw, 5.5rem);
+  font-weight: var(--font-black);
+  line-height: .9;
+  letter-spacing: var(--tracking-tighter);
+  text-transform: uppercase;
+}
+
+.culture-life__header h2 span { color: var(--color-red); }
+
+.culture-life__copy {
+  max-width: 39rem;
+  align-self: end;
+  color: rgba(0, 0, 0, .65);
+  font-size: var(--text-body);
+  line-height: 1.65;
+}
+
+.culture-life__copy p + p { margin-top: var(--space-5); }
+
+.culture-life__lead {
+  color: var(--color-black);
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-weight: var(--font-medium);
+  line-height: 1.45;
+}
+
+.culture-life__gallery {
+  display: grid;
+  grid-column: 1 / -1;
+  gap: var(--space-3);
+}
+
+.culture-life__image { overflow: hidden; aspect-ratio: 1; }
+
+.culture-life__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s var(--ease-out);
+}
+
+.culture-life__note {
+  display: flex;
+  min-height: 19rem;
+  padding: clamp(1.5rem, 5vw, 2.75rem);
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--color-red);
+  color: var(--color-text-on-red);
+}
+
+.culture-life__note span {
+  font-size: var(--text-caption);
+  font-weight: var(--font-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+}
+
+.culture-life__note p {
+  font-size: clamp(1.55rem, 4vw, 2.5rem);
+  font-weight: var(--font-black);
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+@media (hover: hover) {
+  .culture-life__image:hover img { transform: scale(1.035); }
+}
+
+@media (min-width: 720px) {
+  .culture-life__inner { grid-template-columns: minmax(0, 1.15fr) minmax(20rem, .85fr); }
+  .culture-life__gallery { grid-template-columns: 1fr .72fr 1fr; align-items: stretch; }
+  .culture-life__note { min-height: 0; }
+}
+
+/* Culture: Principles */
+
+.culture-principles {
+  background: var(--color-black);
+  color: var(--color-text-primary);
+}
+
+.culture-principles__inner { padding-block: clamp(4.5rem, 10vw, 8rem); }
+
+.culture-principles__header {
+  display: grid;
+  gap: var(--space-7);
+  align-items: end;
+  margin-bottom: clamp(3rem, 7vw, 5.5rem);
+}
+
+.culture-principles__eyebrow {
+  margin-bottom: var(--space-5);
+  color: var(--color-red-light);
+  font-size: var(--text-caption);
+  font-weight: var(--font-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+}
+
+.culture-principles__header h2 {
+  font-size: clamp(2.35rem, 7vw, 5.5rem);
+  font-weight: var(--font-black);
+  line-height: .9;
+  letter-spacing: var(--tracking-tighter);
+  text-transform: uppercase;
+}
+
+.culture-principles__header h2 span { color: var(--color-red-light); }
+
+.culture-principles__header > p {
+  max-width: 34rem;
+  color: var(--color-text-secondary);
+  font-size: var(--text-body-lg);
+  line-height: 1.55;
+}
+
+.culture-principles__grid { border-top: 1px solid rgba(255, 255, 255, .18); }
+
+.culture-principles__grid li {
+  display: grid;
+  grid-template-columns: 2.75rem minmax(0, 1fr);
+  gap: var(--space-5);
+  min-height: 13rem;
+  padding-block: clamp(1.75rem, 4vw, 2.75rem);
+  border-bottom: 1px solid rgba(255, 255, 255, .18);
+}
+
+.culture-principles__grid li > span {
+  color: var(--color-red-light);
+  font-size: var(--text-small);
+  font-weight: var(--font-bold);
+}
+
+.culture-principles__grid h3 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: var(--font-black);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.culture-principles__grid p {
+  max-width: 31rem;
+  margin-top: var(--space-4);
+  color: var(--color-text-secondary);
+  font-size: var(--text-small);
+  line-height: 1.55;
+}
+
+@media (hover: hover) {
+  .culture-principles__grid li { transition: background-color var(--duration-fast) var(--ease-standard); }
+  .culture-principles__grid li:hover { background: rgba(215, 25, 32, .09); }
+}
+
+@media (min-width: 760px) {
+  .culture-principles__header { grid-template-columns: minmax(0, 1.2fr) minmax(18rem, .8fr); }
+  .culture-principles__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .culture-principles__grid li { padding-right: clamp(1.5rem, 5vw, 4rem); }
+  .culture-principles__grid li:nth-child(odd) { border-right: 1px solid rgba(255, 255, 255, .18); }
+  .culture-principles__grid li:nth-child(even) { padding-left: clamp(1.5rem, 5vw, 4rem); }
+}
+
+@media (min-width: 1024px) {
+  .culture-page-shell .people-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Culture: Careers */
+
+.culture-careers {
+  background: var(--color-off-white);
+  color: var(--color-black);
+}
+
+.culture-careers__inner {
+  display: grid;
+  gap: clamp(2.5rem, 7vw, 5rem);
+  padding-block: clamp(4.5rem, 10vw, 8rem);
+}
+
+.culture-careers__eyebrow {
+  margin-bottom: var(--space-5);
+  color: var(--color-red);
+  font-size: var(--text-caption);
+  font-weight: var(--font-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+}
+
+.culture-careers__header h2 {
+  font-size: clamp(2.35rem, 7vw, 5.5rem);
+  font-weight: var(--font-black);
+  line-height: .9;
+  letter-spacing: var(--tracking-tighter);
+  text-transform: uppercase;
+}
+
+.culture-careers__header h2 span { color: var(--color-red); }
+
+.culture-careers__intro {
+  max-width: 39rem;
+  align-self: end;
+  color: rgba(0, 0, 0, .65);
+  line-height: 1.65;
+}
+
+.culture-careers__intro p + p { margin-top: var(--space-5); }
+
+.culture-careers__lead {
+  color: var(--color-black);
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-weight: var(--font-medium);
+  line-height: 1.45;
+}
+
+.culture-careers__disciplines { grid-column: 1 / -1; }
+
+.culture-careers__disciplines > p {
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid rgba(0, 0, 0, .22);
+  color: var(--color-red);
+  font-size: var(--text-caption);
+  font-weight: var(--font-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+}
+
+.culture-careers__disciplines li {
+  display: flex;
+  min-height: 4.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, .22);
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+}
+
+.culture-careers__disciplines li b { color: var(--color-red); }
+
+.culture-careers__cta {
+  grid-column: 1 / -1;
+  padding: clamp(1.75rem, 5vw, 3.5rem);
+  background: var(--color-red);
+  color: var(--color-text-on-red);
+}
+
+.culture-careers__cta > span {
+  font-size: var(--text-caption);
+  font-weight: var(--font-bold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+}
+
+.culture-careers__cta h3 {
+  max-width: 12em;
+  margin-top: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: var(--font-black);
+  line-height: .95;
+  text-transform: uppercase;
+}
+
+.culture-careers__cta p {
+  max-width: 32rem;
+  margin-top: var(--space-5);
+  line-height: 1.55;
+}
+
+.culture-careers__cta a {
+  display: flex;
+  width: min(100%, 22rem);
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+  padding-block: var(--space-4);
+  border-top: 1px solid rgba(255, 255, 255, .6);
+  border-bottom: 1px solid rgba(255, 255, 255, .6);
+  align-items: center;
+  justify-content: space-between;
+  color: inherit;
+  font-size: var(--text-small);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+}
+
+@media (hover: hover) {
+  .culture-careers__cta a span { transition: transform var(--duration-fast) var(--ease-out); }
+  .culture-careers__cta a:hover span { transform: translateX(var(--space-2)); }
+}
+
+@media (min-width: 760px) {
+  .culture-careers__inner { grid-template-columns: minmax(0, 1.1fr) minmax(20rem, .9fr); }
+  .culture-careers__disciplines ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(2rem, 6vw, 6rem); }
+}
+
+/* Culture page responsive rhythm. */
+@media (max-width: 767px) {
+  .culture-page-shell :is(
+    .culture-life__inner,
+    .culture-principles__inner,
+    .people-section,
+    .culture-careers__inner
+  ) {
+    padding-block: 4rem;
+  }
+
+  .culture-page-shell .contact-cta {
+    padding-block: 4.5rem;
+  }
+
+  .culture-page-shell .people-section {
+    padding-block: 1rem 4rem;
+  }
+
+  .culture-page-shell .people-section__divider {
+    display: block;
+  }
+
+  .culture-page-shell .culture-principles__grid li:last-child {
+    min-height: auto;
+    padding-block-end: var(--space-6);
+    border-bottom: 0;
+  }
+
+  .culture-page-shell .culture-principles__inner {
+    padding-block-end: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .culture-page-shell :is(
+    .culture-life__inner,
+    .culture-principles__inner,
+    .people-section,
+    .culture-careers__inner
+  ) {
+    padding-block: 5rem;
+  }
+
+  .culture-page-shell .contact-cta {
+    padding-block: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .culture-page-shell .culture-principles__inner {
+    padding-block-end: 2rem;
+  }
+
+  .culture-page-shell .culture-principles__grid li:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .culture-page-shell .people-section {
+    padding-block-start: 2rem;
+  }
+}
+
+/* Keep the desktop heading responsive after the shared 5rem heading rule. */
+@media (min-width: 1024px) {
+  .culture-hero .culture-hero__title {
+    font-size: clamp(3rem, min(5.6vw, 9vh), 5rem);
+  }
+}
+
+/* Equal-height desktop gallery without constraining the note's content. */
+@media (min-width: 1024px) {
+  .culture-life__gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    min-height: clamp(20rem, 30vw, 29rem);
+  }
+  .culture-life__image {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    aspect-ratio: auto;
+    margin: 0;
+  }
+  .culture-life__image img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .culture-life__note {
+    min-width: 0;
+    min-height: 0;
+    gap: 2rem;
+    padding: clamp(1.5rem, 2.2vw, 2.25rem);
+  }
+  .culture-life__note p {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    line-height: 1.15;
+  }
+}
+
+@media (max-width: 767px) {
+  .culture-page-shell .culture-hero__visual {
+    height: auto;
+    aspect-ratio: 1721 / 914;
+    margin: 0;
+  }
+  .culture-page-shell .culture-hero__visual > img {
+    display: block;
+    object-fit: contain;
+    object-position: center;
+  }
+  .culture-page-shell .culture-hero__visual figcaption {
+    inset-inline: .75rem;
+    bottom: .75rem;
+    font-size: .625rem;
+    letter-spacing: .04em;
+    padding: .375rem .5rem;
+    background: rgba(5, 5, 19, .85);
+    color: #fff;
+  }
+  .culture-page-shell .culture-life__note p,
+  .culture-page-shell .culture-careers__cta p { color: #fff; }
+}
+

@@ -1,0 +1,45 @@
+/* Align mixed-category project cards on desktop without cropping artwork. */
+@media (min-width: 1024px) {
+  .work-page-shell .work-library__grid { align-items: stretch; }
+  .work-page-shell .work-library__grid .work-project {
+    min-width: 0;
+    height: 100%;
+  }
+  .work-page-shell .work-library__grid .work-project .work-project__media {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 5 / 4;
+    flex: 0 0 auto;
+    background: #050513;
+  }
+  .work-page-shell .work-library__grid .work-project .work-project__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  .work-page-shell .work-library__grid .work-project__body {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 1.25rem 3rem 1.5rem 1.25rem;
+  }
+  .work-page-shell .work-library__grid .work-project__body > div {
+    min-height: 2.275rem;
+    align-items: flex-start;
+    gap: .75rem;
+    margin-bottom: .75rem;
+  }
+  .work-page-shell .work-library__grid .work-project__category,
+  .work-page-shell .work-library__grid .work-project__year {
+    min-width: 0;
+    line-height: 1.4;
+  }
+  .work-page-shell .work-library__grid .work-project h3 {
+    margin: 0;
+    line-height: 1.12;
+  }
+}

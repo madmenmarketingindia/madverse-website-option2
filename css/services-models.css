@@ -1,0 +1,27 @@
+/* Compact, aligned engagement cards on desktop only. */
+@media (min-width: 1024px) {
+  .services-models { padding-block: clamp(4rem, 6vw, 6rem); }
+  .services-models__header { margin-bottom: clamp(2.5rem, 4vw, 4rem); }
+  .services-models__grid { align-items: stretch; }
+  .services-models__grid article {
+    min-width: 0;
+    min-height: 0;
+    padding: clamp(1.5rem, 2vw, 2rem);
+  }
+  .services-models__grid h3 {
+    max-width: 100%;
+    min-height: 2.1em;
+    margin: 1.75rem 0 1rem;
+    font-size: clamp(1.75rem, 2.25vw, 2.5rem);
+    line-height: 1.05;
+  }
+  .services-models__grid article > p { margin-bottom: 1.5rem; }
+  .services-models__best { padding-top: 1.25rem; }
+  .services-models__best p { min-height: 4.5em; }
+  .services-models__grid article > a { gap: .75rem; margin-top: 1.5rem; line-height: 1.4; }
+  .services-models__grid article.services-models__featured > p { color: #fff; }
+  .services-models__grid article.services-models__featured > a {
+    border-color: rgba(5, 5, 19, .35);
+    color: #050513;
+  }
+}
