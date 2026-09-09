@@ -1,0 +1,45 @@
+/* Targeted mobile corrections; desktop layouts stay unchanged. */
+@media (max-width: 767px) {
+  .work-page-shell .work-project__body {
+    padding: 1rem 2.5rem 1rem 1rem;
+    min-height: 0;
+  }
+  .work-page-shell .work-project h3 {
+    font-size: clamp(1.125rem, 3.8vw, 1.375rem);
+    line-height: 1.2;
+    margin-bottom: 0;
+  }
+  .work-page-shell .work-project__category { font-size: .6875rem; line-height: 1.4; }
+  .culture-page-shell .culture-hero__visual {
+    height: auto;
+    aspect-ratio: 1721 / 914;
+    margin: 0;
+  }
+  .culture-page-shell .culture-hero__visual > img {
+    display: block;
+    object-fit: contain;
+    object-position: center;
+  }
+  .culture-page-shell .culture-hero__visual figcaption {
+    inset-inline: .75rem;
+    bottom: .75rem;
+    font-size: .625rem;
+    letter-spacing: .04em;
+    padding: .375rem .5rem;
+    background: rgba(5, 5, 19, .85);
+    color: #fff;
+  }
+  .culture-page-shell .culture-life__note p,
+  .culture-page-shell .culture-careers__cta p { color: #fff; }
+  .think-page-shell .think-card--text .think-card__body { min-height: 0; }
+  .think-page-shell .think-card--text blockquote { margin-block: 0; padding-block: 1.5rem; }
+  .hatters-page-shell .hatters-format,
+  .hatters-page-shell .hatters-format__body,
+  .hatters-page-shell .hatters-voice__manual article { min-height: 0; }
+  /* The existing cover minimum is marked important in the base stylesheet. */
+  .hatters-page-shell .hatters-voice__cover { min-height: 0 !important; gap: 1.5rem; }
+  .hatters-page-shell .hatters-format__body { gap: 1.5rem; }
+}
+@media (max-width: 480px) {
+  .work-page-shell .work-library__grid { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+}
