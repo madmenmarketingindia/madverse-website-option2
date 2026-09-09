@@ -49,7 +49,7 @@
     link.setAttribute("aria-label", "View case study: " + (title ? title.textContent.trim() : "project"));
     card.insertBefore(link, card.firstChild);
   });
-  var isExpanded = false;
+  var additionalVisible = 0;
 
   function applyFilter(filter) {
     var orderedCards = filter === "all" ? mixedCards : cards;
@@ -57,7 +57,7 @@
       var categories = (card.dataset.workCategory || "").split(/\s+/);
       return filter === "all" || categories.indexOf(filter) !== -1;
     });
-    var visibleLimit = isExpanded ? matchingCards.length : (filter === "all" ? allPageSize : pageSize);
+    var visibleLimit = (filter === "all" ? allPageSize : pageSize) + additionalVisible;
     var visibleCount = Math.min(visibleLimit, matchingCards.length);
 
     cards.forEach(function (card) {
@@ -97,7 +97,7 @@
     });
 
     filters.dataset.activeFilter = selected.dataset.workFilter;
-    isExpanded = false;
+    additionalVisible = 0;
     applyFilter(selected.dataset.workFilter);
     filters.dispatchEvent(new CustomEvent("workfilterchange", {
       bubbles: true,
@@ -107,7 +107,7 @@
 
   if (loadMore) {
     loadMore.addEventListener("click", function () {
-      isExpanded = true;
+      additionalVisible += pageSize;
       applyFilter(filters.dataset.activeFilter || "all");
     });
   }
