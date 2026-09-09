@@ -1,0 +1,54 @@
+/* Responsive hero adjustments, after the shared desktop type rules. */
+.think-hero__inner {
+  align-items: center;
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  padding-block: clamp(1.5rem, 4vh, 3rem);
+}
+.think-hero__content { min-width: 0; }
+.think-hero__title {
+  margin: 0;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  line-height: .98;
+}
+.think-hero__intro { margin-top: 1.5rem; }
+.think-hero__link { margin-top: 1.75rem; max-width: 100%; }
+.think-hero__link img { flex-shrink: 0; }
+.think-hero__visual {
+  min-width: 0;
+  margin: 0;
+  aspect-ratio: 3 / 2;
+}
+.think-hero__visual > img {
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+.think-hero__visual figcaption {
+  padding: .5rem .75rem;
+  background: rgba(5, 5, 19, .85);
+  color: #fff;
+}
+@media (min-width: 1024px) {
+  .think-hero .think-hero__title {
+    font-size: clamp(3.25rem, min(5.3vw, 9vh), 5rem);
+  }
+}
+@media (max-width: 1023px) {
+  .think-hero__inner { min-height: 0; }
+  .think-hero__content { width: 100%; max-width: 42rem; }
+  .think-hero__visual { width: min(100%, 44rem); justify-self: center; }
+}
+@media (max-width: 767px) {
+  .think-hero__inner { padding-block: 1.5rem 2.5rem; gap: 2rem; }
+  .think-hero__content { max-width: 30rem; }
+  .think-hero__title { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .think-hero__intro { margin-top: 1.25rem; font-size: 1rem; }
+  .think-hero__link { margin-top: 1.5rem; }
+  .think-hero__visual figcaption {
+    right: .5rem;
+    bottom: .5rem;
+    max-width: calc(100% - 1rem);
+    font-size: .6875rem;
+    letter-spacing: .06em;
+  }
+}
