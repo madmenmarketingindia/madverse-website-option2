@@ -8,7 +8,36 @@
   var cards = Array.prototype.slice.call(document.querySelectorAll("[data-work-card]"));
   var status = document.querySelector("[data-work-filter-status]");
   var loadMore = document.querySelector("[data-work-load-more]");
+  var grid = document.querySelector("[data-work-grid]");
   var pageSize = 6;
+
+  // Assign each project to one bucket so multi-category cards appear only once.
+  var categories = buttons.map(function (button) {
+    return button.dataset.workFilter;
+  }).filter(function (category) { return category !== "all"; });
+  var buckets = categories.map(function () { return []; });
+  var uncategorised = [];
+  cards.forEach(function (card) {
+    var tags = (card.dataset.workCategory || "").split(/\s+/);
+    var bucketIndex = categories.findIndex(function (category) {
+      return tags.indexOf(category) !== -1;
+    });
+    if (bucketIndex === -1) uncategorised.push(card);
+    else buckets[bucketIndex].push(card);
+  });
+  var mixedCards = [];
+  var longestBucket = buckets.reduce(function (longest, bucket) {
+    return Math.max(longest, bucket.length);
+  }, 0);
+  for (var round = 0; round < longestBucket; round += 1) {
+    buckets.forEach(function (bucket) {
+      if (bucket[round]) mixedCards.push(bucket[round]);
+    });
+  }
+  mixedCards = mixedCards.concat(uncategorised);
+  var allPageSize = Math.max(pageSize, buckets.filter(function (bucket) {
+    return bucket.length > 0;
+  }).length);
 
   cards.forEach(function (card) {
     if (card.querySelector(".work-project__link")) return;
@@ -23,11 +52,12 @@
   var isExpanded = false;
 
   function applyFilter(filter) {
-    var matchingCards = cards.filter(function (card) {
+    var orderedCards = filter === "all" ? mixedCards : cards;
+    var matchingCards = orderedCards.filter(function (card) {
       var categories = (card.dataset.workCategory || "").split(/\s+/);
       return filter === "all" || categories.indexOf(filter) !== -1;
     });
-    var visibleLimit = isExpanded ? matchingCards.length : pageSize;
+    var visibleLimit = isExpanded ? matchingCards.length : (filter === "all" ? allPageSize : pageSize);
     var visibleCount = Math.min(visibleLimit, matchingCards.length);
 
     cards.forEach(function (card) {
@@ -35,6 +65,10 @@
       var isVisible = matchIndex !== -1 && matchIndex < visibleLimit;
       card.hidden = !isVisible;
     });
+    // Reorder the actual elements so visual, keyboard and reading order agree.
+    if (grid) {
+      orderedCards.forEach(function (card) { grid.appendChild(card); });
+    }
 
     if (status) {
       var selectedButton = buttons.find(function (button) {

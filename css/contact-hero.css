@@ -1,0 +1,65 @@
+/* Contact hero sizing, after shared heading and button styles. */
+.contact-hero__content { min-width: 0; }
+.contact-hero__intro {
+  margin-top: 1.5rem;
+  font-size: clamp(1rem, 1.4vw, 1.125rem);
+  line-height: 1.55;
+}
+.contact-hero__email {
+  max-width: 100%;
+  margin-top: 1.5rem;
+  line-height: 1.3;
+}
+.contact-hero__email span { min-width: 0; overflow-wrap: anywhere; }
+.contact-hero__visual img { display: block; }
+.contact-hero__visual figcaption {
+  padding: .5rem .75rem;
+  background: rgba(5, 5, 19, .85);
+}
+@media (min-width: 1024px) {
+  .contact-hero__inner {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+    gap: clamp(2rem, 3vw, 3rem);
+    padding-block: 1.5rem;
+  }
+  .contact-hero__content { padding-block: 1rem; }
+  .contact-hero .contact-hero__title {
+    max-width: 100%;
+    font-size: clamp(2.5rem, min(4.2vw, 8vh), 4.5rem);
+    line-height: .98;
+  }
+  .contact-hero__visual {
+    height: clamp(18rem, calc(100svh - var(--header-height) - 3rem), 32rem);
+  }
+}
+@media (max-width: 1023px) {
+  .contact-hero__inner {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+    gap: 2rem;
+    padding-block: 1.5rem 0;
+  }
+  .contact-hero__content { max-width: 42rem; padding: 0; }
+  .contact-hero .contact-hero__title {
+    max-width: 100%;
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    line-height: 1;
+  }
+  .contact-hero__intro { max-width: 34rem; }
+  .contact-hero__visual {
+    width: min(100%, 44rem);
+    height: auto;
+    aspect-ratio: 1456 / 1090;
+    margin: 0;
+    justify-self: center;
+  }
+  .contact-hero__visual img { object-fit: contain; }
+}
+@media (max-width: 600px) {
+  .contact-hero__inner { gap: 1.75rem; }
+  .contact-hero__content { max-width: 30rem; }
+  .contact-hero .contact-hero__title { font-size: clamp(1.875rem, 6.8vw, 2.5rem); }
+  .contact-hero__intro { margin-top: 1.25rem; }
+  .contact-hero__email { min-height: 3.5rem; padding: .875rem 1rem; }
+  .contact-hero__visual figcaption { right: .75rem; bottom: .75rem; font-size: .6875rem; }
+}

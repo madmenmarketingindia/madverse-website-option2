@@ -1,0 +1,22 @@
+/* One restrained motion language across all campaign landing pages. */
+[data-landing-motion] {
+  --duration-reveal: 600ms;
+  --motion-distance-md: 1rem;
+  --motion-stagger-step: 60ms;
+}
+@media (max-width: 767px) {
+  [data-landing-motion] { --motion-distance-md: .625rem; }
+}
+/* Also reveal immediately when navigating by keyboard. */
+.motion-ready [data-landing-motion] [data-motion="reveal"]:focus-within {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0ms;
+}
+@media (prefers-reduced-motion: reduce) {
+  .motion-ready [data-landing-motion] [data-motion="reveal"] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
