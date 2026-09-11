@@ -58,7 +58,7 @@
 }
 @media (min-width: 900px) {
   .home-solutions__header { display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; margin-bottom: 2.5rem; }
-  .home-solutions h2 { max-width: none; font-size: clamp(2.75rem, 4.6vw, 5rem); }
+  .home-solutions h2 { max-width: none; font-size: clamp(2.75rem, 4.6vw, 5rem); text-transform: uppercase; }
   .home-solutions__intro { margin-top: 2.5rem; font-size: 1rem; }
   .home-solutions__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .home-solutions__grid > li { border-top: 0; border-right: 1px solid var(--color-border-strong); padding-inline: 1.25rem; }
