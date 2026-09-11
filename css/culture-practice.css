@@ -1,0 +1,26 @@
+/* Concrete examples extend the existing values section. */
+.culture-principles--practice { background: var(--color-header-bg); }
+.culture-principles--practice .culture-principles__header { display: block; text-align: center; margin-bottom: 1.75rem; }
+.culture-principles--practice .culture-principles__header h2 { max-width: none; font-size: clamp(1.8rem, 7.8vw, 4rem); line-height: .96; letter-spacing: var(--tracking-tighter); text-transform: uppercase; }
+.culture-principles--practice .culture-principles__header h2 span { color: var(--color-red); }
+.culture-principles--practice .culture-principles__header > p { max-width: none; margin: 1rem auto 0; font-size: .875rem; line-height: 1.5; }
+.culture-principles--practice .culture-principles__header .culture-practice__label { margin-top: 1.25rem; font-size: .625rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.culture-principles--practice .culture-principles__grid { max-width: 70rem; margin-inline: auto; }
+.culture-principles--practice .culture-principles__grid li { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 12px; padding: 1.25rem 0; min-height: 0; border-bottom: 1px solid var(--color-border-strong); }
+.culture-principles--practice .culture-principles__grid li > span { color: var(--color-red); font-size: 1.5rem; font-weight: 900; line-height: 1.15; white-space: nowrap; }
+.culture-principles--practice .culture-principles__grid li:last-child { border-bottom: 1px solid var(--color-border-strong); }
+.culture-principles--practice .culture-principles__grid li > div { min-width: 0; padding-left: 12px; border-left: 1px solid var(--color-border-strong); }
+.culture-principles--practice .culture-principles__grid h3 { margin: 0 0 .4rem; font-size: clamp(1rem, 4.6vw, 1.5rem); line-height: 1.1; font-weight: 900; text-transform: uppercase; }
+.culture-principles--practice .culture-principles__grid p { max-width: none; margin: 0; color: var(--color-text-secondary); font-size: .8125rem; line-height: 1.45; }
+.culture-principles--practice .culture-principles__grid .culture-practice__example { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: .5rem; padding: .75rem; margin-top: .75rem; background: #101016; color: var(--color-text-primary); }
+.culture-practice__example > span:first-child { color: var(--color-red); font-size: 1.5rem; line-height: 1; }
+.culture-practice__note { margin-top: 1.5rem; color: var(--color-text-secondary); text-align: center; font-size: .6875rem; }
+@media (min-width: 768px) {
+  .culture-principles--practice .culture-principles__header { margin-bottom: 2.5rem; }
+  .culture-principles--practice .culture-principles__header > p { font-size: 1rem; }
+  .culture-principles--practice .culture-principles__grid li { grid-template-columns: 40px minmax(0, 1fr); gap: 1rem; padding-block: 1.75rem; }
+  .culture-principles--practice .culture-principles__grid li:nth-child(odd) { padding-right: 1.5rem; }
+  .culture-principles--practice .culture-principles__grid li:nth-child(even) { padding-left: 1.5rem; }
+  .culture-principles--practice .culture-principles__grid p { font-size: .9375rem; }
+  .culture-practice__note { font-size: .8125rem; }
+}

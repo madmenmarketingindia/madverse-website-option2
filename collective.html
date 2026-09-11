@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/collective-hero.css">
+  <link rel="stylesheet" href="css/collective-selector.css">
 </head>
 <body id="top">
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -119,6 +120,39 @@
             <div><h3>Compound impact</h3><p>Connected thinking turns individual strengths into greater outcomes.</p></div>
           </li>
         </ol>
+      </div>
+    </section>
+
+    <section class="collective-selector" id="your-collective" aria-labelledby="selector-title">
+      <div class="collective-selector__inner container container--wide">
+        <header class="collective-selector__header" data-motion="reveal">
+          <p class="collective-selector__eyebrow">Built around your ambition</p>
+          <h2 id="selector-title">Your challenge.<br><span>Your collective.</span></h2>
+          <p>Choose a challenge. See who comes together.</p>
+        </header>
+        <div class="collective-selector__tabs" id="challenge-tabs" hidden aria-label="Choose your challenge">
+          <button type="button" id="challenge-brand" data-challenge="brand">Brand Launch</button>
+          <button type="button" id="challenge-campaign" data-challenge="campaign">Campaign</button>
+          <button type="button" id="challenge-digital" data-challenge="digital">Digital Experience</button>
+          <button type="button" id="challenge-content" data-challenge="content">Content Growth</button>
+        </div>
+        <noscript><p class="collective-selector__fallback">Explore a brand launch below, or <a href="#collective-companies-title">browse every specialist</a>.</p></noscript>
+        <div class="collective-selector__panel" id="challenge-panel" data-motion="reveal">
+          <p class="collective-selector__label" data-challenge-label>Your brand launch collective</p>
+          <h3 data-challenge-title>From first idea to first impression.</h3>
+          <div class="collective-selector__result">
+            <ol class="collective-selector__teams" data-challenge-teams>
+              <li><a href="mad-men-marketing.html"><span class="collective-selector__number" aria-hidden="true">01</span><span><strong>Mad Men Marketing</strong><span>Sets the positioning and launch strategy.</span></span><span class="collective-selector__arrow" aria-hidden="true">↗</span></a></li>
+              <li><a href="mad-men-design.html"><span class="collective-selector__number" aria-hidden="true">02</span><span><strong>Mad Men Design</strong><span>Builds the identity and visual system.</span></span><span class="collective-selector__arrow" aria-hidden="true">↗</span></a></li>
+              <li><a href="mad-men-advertising.html"><span class="collective-selector__number" aria-hidden="true">03</span><span><strong>Mad Men Advertising</strong><span>Turns the launch idea into a campaign.</span></span><span class="collective-selector__arrow" aria-hidden="true">↗</span></a></li>
+            </ol>
+            <div class="collective-selector__summary">
+              <div class="collective-selector__art" aria-hidden="true"></div>
+              <p>One shared brief. Connected expertise.</p>
+              <a class="collective-selector__cta" href="contact.html"><span data-challenge-cta>Discuss your brand launch</span><span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -328,5 +362,6 @@
 
   <script src="js/navigation.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/collective-selector.js"></script>
 </body>
 </html>
