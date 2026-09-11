@@ -155,3 +155,22 @@
   .influencer-lp-hero__eyebrow { font-size:.65rem; }
   .influencer-lp-hero__cta { width:100%; }
 }
+
+/* Small-screen readability and comfortable link targets. */
+@media (max-width: 767px) {
+  .influencer-lp-faq__eyebrow,
+  .influencer-lp-process__eyebrow,
+  .influencer-lp-scope__eyebrow,
+  .influencer-lp-films__eyebrow,
+  .influencer-lp-focus__eyebrow,
+  .influencer-lp-focus__label,
+  .influencer-lp-work__eyebrow,
+  .influencer-lp-work__category,
+  .influencer-lp-work dt,
+  .influencer-lp-hero__eyebrow { font-size: .75rem; }
+
+  .influencer-lp-faq__contact a,
+  .influencer-lp-work__copy>a,
+  .influencer-lp-focus__link { min-height: 44px; align-items: center; }
+  .influencer-lp-faq__contact a { display: inline-flex; }
+}

@@ -130,3 +130,22 @@
   .performance-lp-hero__eyebrow { font-size:.65rem; }
   .performance-lp-hero__cta { width:100%; }
 }
+
+/* Small-screen readability and comfortable link targets. */
+@media (max-width: 767px) {
+  .performance-lp-faq__eyebrow,
+  .performance-lp-why__eyebrow,
+  .performance-lp-process__eyebrow,
+  .performance-lp-deliver__eyebrow,
+  .performance-lp-deliver__label,
+  .performance-lp-work__eyebrow,
+  .performance-lp-work__category,
+  .performance-lp-hero__eyebrow,
+  .performance-lp-hero__visual figcaption { font-size: .75rem; }
+
+  .performance-lp-faq__contact a,
+  .performance-lp-work__copy>a,
+  .performance-lp-work__all,
+  .performance-lp-why__link { min-height: 44px; align-items: center; }
+  .performance-lp-faq__contact a { display: inline-flex; }
+}

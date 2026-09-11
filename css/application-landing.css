@@ -127,3 +127,21 @@
   .application-lp-hero__eyebrow { font-size:.65rem; }
   .application-lp-hero__cta { width:100%; }
 }
+
+/* Small-screen readability and comfortable link targets. */
+@media (max-width: 767px) {
+  .application-lp-faq__eyebrow,
+  .application-lp-why__eyebrow,
+  .application-lp-process__eyebrow,
+  .application-lp-build__eyebrow,
+  .application-lp-build__label,
+  .application-lp-work__eyebrow,
+  .application-lp-work__category,
+  .application-lp-hero__eyebrow { font-size: .75rem; }
+
+  .application-lp-faq__contact a,
+  .application-lp-work__copy>a,
+  .application-lp-work__all,
+  .application-lp-why__link { min-height: 44px; align-items: center; }
+  .application-lp-faq__contact a { display: inline-flex; }
+}

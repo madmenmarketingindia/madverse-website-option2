@@ -13,7 +13,9 @@
 
       event.preventDefault();
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      history.replaceState(null, '', link.hash);
+      const sectionUrl = new URL(window.location.href);
+      sectionUrl.hash = link.hash;
+      history.replaceState(null, '', sectionUrl);
     });
   });
 

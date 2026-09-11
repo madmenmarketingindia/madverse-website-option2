@@ -141,3 +141,22 @@
   .video-lp-hero__cta { width:100%; justify-content:space-between; }
   .video-lp-hero__visual { aspect-ratio:4/3; }
 }
+
+/* Small-screen readability and comfortable link targets. */
+@media (max-width: 767px) {
+  .video-lp-faq__eyebrow,
+  .video-lp-why__eyebrow,
+  .video-lp-process__eyebrow,
+  .video-lp-process__label,
+  .video-lp-process__checkpoint strong,
+  .video-lp-formats__eyebrow,
+  .video-lp-formats__label,
+  .video-lp-work__eyebrow,
+  .video-lp-work__category,
+  .video-lp-hero__eyebrow { font-size: .75rem; }
+
+  .video-lp-faq__contact a,
+  .video-lp-work__copy>a,
+  .video-lp-why__team a { min-height: 44px; align-items: center; }
+  .video-lp-faq__contact a { display: inline-flex; }
+}

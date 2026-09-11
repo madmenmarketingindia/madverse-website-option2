@@ -144,3 +144,20 @@
   .campaign-lp-hero__cta { width:100%; justify-content:space-between; }
   .campaign-lp-hero__eyebrow { font-size:.65rem; }
 }
+
+/* Small-screen readability and comfortable link targets. */
+@media (max-width: 767px) {
+  .campaign-lp-faq__eyebrow,
+  .campaign-lp-why__eyebrow,
+  .campaign-lp-process__eyebrow,
+  .campaign-lp-create__eyebrow,
+  .campaign-lp-work__eyebrow,
+  .campaign-lp-work__category,
+  .campaign-lp-hero__eyebrow,
+  .campaign-lp-hero figcaption div>span { font-size: .75rem; }
+
+  .campaign-lp-faq__contact a,
+  .campaign-lp-why__team a,
+  .campaign-lp-hero figcaption a { min-height: 44px; align-items: center; }
+  .campaign-lp-faq__contact a { display: inline-flex; }
+}
