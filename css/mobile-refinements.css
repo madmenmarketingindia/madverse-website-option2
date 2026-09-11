@@ -9,7 +9,11 @@
     line-height: 1.2;
     margin-bottom: 0;
   }
-  .work-page-shell .work-project__category { font-size: .6875rem; line-height: 1.4; }
+  .work-page-shell .work-project__category { font-size: .75rem; line-height: 1.4; }
+  .work-page-shell .work-hero__title { font-size: clamp(2.7rem, 10vw, 3.5rem); }
+  .work-page-shell .work-filter__heading { grid-template-columns: minmax(0, 1fr); }
+  .work-page-shell .work-filter__title { font-size: clamp(2.25rem, 10vw, 4.5rem); }
+  .think-page-shell .think-newsletter__form small { font-size: .75rem; }
   .think-page-shell .think-card--text .think-card__body { min-height: 0; }
   .think-page-shell .think-card--text blockquote { margin-block: 0; padding-block: 1.5rem; }
   .hatters-page-shell .hatters-format,
@@ -18,6 +22,15 @@
   /* The existing cover minimum is marked important in the base stylesheet. */
   .hatters-page-shell .hatters-voice__cover { min-height: 0 !important; gap: 1.5rem; }
   .hatters-page-shell .hatters-format__body { gap: 1.5rem; }
+  .hatters-page-shell .hatters-capabilities__margin strong { max-width: 100%; }
+  .hatters-page-shell .hatters-process__page { min-height: 0; gap: 1.75rem; }
+  .hatters-page-shell .hatters-process__page h3 { font-size: clamp(1.25rem, 5vw, 1.65rem); line-height: 1.05; }
+  .hatters-page-shell .hatters-process__page-top small { font-size: .6875rem; opacity: .65; }
+  .hatters-page-shell .hatters-format__body h3 { max-width: 100%; font-size: clamp(2rem, 9vw, 3.5rem); }
+  .hatters-page-shell .hatters-voice__header { grid-template-columns: minmax(0, 1fr); }
+  .hatters-page-shell .hatters-voice__header h2 { font-size: clamp(1.8rem, 9vw, 3.25rem); line-height: .95; }
+  .hatters-page-shell .hatters-work__campaign-copy h3 { font-size: clamp(2.5rem, 12vw, 4rem); line-height: .9; }
+  .hatters-page-shell .hatters-work__website-copy h3 { font-size: clamp(2rem, 9vw, 3.5rem); line-height: .95; }
 }
 @media (max-width: 480px) {
   .work-page-shell .work-library__grid { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }

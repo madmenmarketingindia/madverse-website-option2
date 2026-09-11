@@ -1,0 +1,33 @@
+/* Small mobile refinements for the profile, application and two case studies. */
+@media (max-width: 767px) {
+  .company-profile-page-shell :is(.profile-hero__cover > span, .profile-proof__index, .profile-viewer__toolbar small, .profile-viewer__actions a, .profile-viewer__actions button) {
+    font-size: .75rem;
+  }
+
+  .application-page :is(.job-detail-hero dt, .application-role dt, .application-role__label, .application-form small) {
+    font-size: .75rem;
+  }
+  .application-page .job-detail-hero__back { min-height: 44px; }
+  .application-page .job-detail-hero h1 { font-size: clamp(2rem, 9vw, 4rem); }
+  .application-page .application-form label:not(.application-form__consent) { display: block; }
+  .application-page .application-form :is(input:not([type="checkbox"]), select, textarea) {
+    display: block;
+    margin-top: .6rem;
+    font-size: 1rem;
+  }
+  .application-page .application-form small { display: block; margin-top: .6rem; }
+
+  .case-study-page-shell :is(.case-hero dt, .case-overview dt) { font-size: .75rem; }
+  .case-study-page-shell :is(.case-hero__back, .case-next__header > a) {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+  }
+  .case-study-page-shell :is(.case-hero__title-row, .case-overview__inner, .case-strategy__inner) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .case-study-page-shell .case-overview__heading h2 { font-size: clamp(2rem, 9vw, 3.5rem); }
+  .case-study-page-shell .case-v2-nav__inner > div { min-width: 0; max-width: 100%; }
+  .case-study-page-shell .case-impact__outcomes article { min-height: 0; }
+  .case-study-page-shell .case-impact__outcomes h3 { margin-top: 2rem; }
+}

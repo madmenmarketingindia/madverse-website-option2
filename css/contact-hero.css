@@ -61,5 +61,5 @@
   .contact-hero .contact-hero__title { font-size: clamp(1.875rem, 6.8vw, 2.5rem); }
   .contact-hero__intro { margin-top: 1.25rem; }
   .contact-hero__email { min-height: 3.5rem; padding: .875rem 1rem; }
-  .contact-hero__visual figcaption { right: .75rem; bottom: .75rem; font-size: .6875rem; }
+  .contact-hero__visual figcaption { right: .75rem; bottom: .75rem; font-size: .75rem; }
 }

@@ -134,3 +134,23 @@
   .social-lp-hero__eyebrow { font-size:.65rem; }
   .social-lp-hero__cta { width:100%; }
 }
+
+/* Small-screen readability and comfortable link targets. */
+@media (max-width: 767px) {
+  .social-lp-faq__eyebrow,
+  .social-lp-why__eyebrow,
+  .social-lp-process__eyebrow,
+  .social-lp-process__label,
+  .social-lp-process__checkpoint strong,
+  .social-lp-deliver__eyebrow,
+  .social-lp-deliver__label,
+  .social-lp-work__eyebrow,
+  .social-lp-work__category,
+  .social-lp-hero__eyebrow { font-size: .75rem; }
+
+  .social-lp-faq__contact a,
+  .social-lp-work__copy>a,
+  .social-lp-work__all,
+  .social-lp-why__team a { min-height: 44px; align-items: center; }
+  .social-lp-faq__contact a { display: inline-flex; }
+}

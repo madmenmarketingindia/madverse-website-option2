@@ -470,6 +470,9 @@
 
 /* Culture page responsive rhythm. */
 @media (max-width: 767px) {
+  .culture-page-shell .culture-hero__title { font-size: clamp(2.75rem, 12vw, 3.5rem); }
+  .culture-page-shell .culture-principles__header { gap: 1.5rem; }
+  .culture-page-shell .culture-principles__grid li { min-height: 0; }
   .culture-page-shell :is(
     .culture-life__inner,
     .culture-principles__inner,
@@ -588,7 +591,7 @@
   .culture-page-shell .culture-hero__visual figcaption {
     inset-inline: .75rem;
     bottom: .75rem;
-    font-size: .625rem;
+    font-size: .75rem;
     letter-spacing: .04em;
     padding: .375rem .5rem;
     background: rgba(5, 5, 19, .85);

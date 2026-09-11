@@ -1,0 +1,44 @@
+/* Featured proof of the connected-solutions promise. */
+.home-case { background: var(--color-header-bg); color: var(--color-text-primary); }
+.home-case__inner { padding-block: 2rem 3rem; }
+.home-case__header { text-align: center; margin-bottom: 1.75rem; }
+.home-case__eyebrow { margin-bottom: 1rem; color: var(--color-red); font-size: .6875rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.home-case h2 { margin-inline: auto; font-size: clamp(1.75rem, 7.8vw, 4rem); font-weight: 900; line-height: .96; letter-spacing: var(--tracking-tighter); text-transform: uppercase; }
+.home-case h2 span { color: var(--color-red); }
+.home-case__intro { margin-top: 1rem; color: var(--color-text-secondary); font-size: .8125rem; }
+.home-case__project { display: grid; gap: 1.25rem; }
+.home-case__visual { position: relative; display: block; overflow: hidden; aspect-ratio: 16 / 9; background: var(--color-surface-1); }
+.home-case__visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 42%; transform: scale(1.25); transition: transform .35s ease; }
+.home-case__story { min-width: 0; }
+.home-case__project-header > p { color: var(--color-text-secondary); font-size: .625rem; letter-spacing: .13em; text-transform: uppercase; }
+.home-case__project-header h3 { margin-top: .5rem; font-size: clamp(1.8rem, 8.3vw, 3rem); font-weight: 900; line-height: 1; letter-spacing: var(--tracking-tighter); text-transform: uppercase; }
+.home-case__steps { margin-top: 1.25rem; }
+.home-case__steps li { display: grid; grid-template-columns: 42px minmax(0, 1fr); align-items: center; gap: 12px; padding-block: 1rem; border-top: 1px solid var(--color-border-strong); }
+.home-case__number { color: var(--color-red); font-size: 2rem; font-weight: 900; line-height: 1; letter-spacing: -.04em; }
+.home-case__steps li > div { padding-left: 12px; border-left: 1px solid var(--color-border-strong); }
+.home-case__steps h4 { margin: 0 0 .35rem; font-size: .875rem; line-height: 1.15; font-weight: 900; text-transform: uppercase; }
+.home-case__steps p { color: var(--color-text-secondary); font-size: .8125rem; line-height: 1.4; }
+.home-case__proof { display: flex; align-items: center; gap: 1rem; padding: 1rem; margin-top: .25rem; background: var(--color-surface-1); }
+.home-case__proof strong { padding-right: 1rem; border-right: 1px solid var(--color-border-strong); color: var(--color-red); font-size: 3.5rem; font-weight: 900; line-height: 1; }
+.home-case__proof span { font-size: 1rem; font-weight: 900; line-height: 1.15; text-transform: uppercase; }
+.home-case__cta { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 52px; margin-top: 1rem; padding: 1rem; background: var(--color-red); font-size: .8125rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.home-case__cta svg { width: 24px; height: 24px; flex-shrink: 0; transition: transform .2s ease; }
+.home-case__cta:focus-visible { outline-color: var(--color-text-primary); outline-offset: 4px; }
+@media (hover: hover) {
+  .home-case__visual:hover img { transform: scale(1.28); }
+  .home-case__cta:hover svg { transform: translate(2px, -2px); }
+}
+@media (min-width: 768px) {
+  .home-case__inner { padding-block: 3rem 4rem; }
+  .home-case__header { margin-bottom: 2.5rem; }
+  .home-case h2 { font-size: clamp(2.75rem, 4.5vw, 4rem); }
+  .home-case__project { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(1.5rem, 3vw, 3rem); align-items: stretch; }
+  .home-case__visual { aspect-ratio: auto; min-height: 100%; }
+  .home-case__visual img { transform: none; }
+  .home-case__project-header h3 { font-size: clamp(1.875rem, 3.2vw, 3rem); }
+  .home-case__intro { font-size: 1rem; }
+  .home-case__steps h4 { font-size: 1rem; }
+  .home-case__steps p { font-size: .9375rem; }
+  .home-case__proof span { font-size: 1.125rem; }
+  .home-case__cta { font-size: .875rem; }
+}

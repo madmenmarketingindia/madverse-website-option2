@@ -146,3 +146,15 @@
   .web-lp-proof__links a { padding:1.5rem 0; border-right:0; border-bottom:1px solid #b9b8b5; }
   .web-lp-proof__links a:last-child { border-bottom:0; }
 }
+
+/* Small-screen readability and comfortable link targets. */
+@media (max-width: 767px) {
+  .web-lp-work__card .web-lp-label,
+  .web-lp-work__link,
+  .web-lp-label,
+  .web-lp-proof__links a>span:first-child { font-size: .75rem; }
+
+  .web-lp-faq__contact a { min-height: 44px; align-items: center; }
+  .web-lp-faq__contact a { display: inline-flex; }
+  .web-lp-hero .btn { width: 100%; justify-content: space-between; }
+}

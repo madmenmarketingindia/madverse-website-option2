@@ -130,3 +130,21 @@
   .ecommerce-lp-hero__eyebrow { font-size:.65rem; }
   .ecommerce-lp-hero__cta { width:100%; }
 }
+
+/* Small-screen readability and comfortable link targets. */
+@media (max-width: 767px) {
+  .ecommerce-lp-faq__eyebrow,
+  .ecommerce-lp-why__eyebrow,
+  .ecommerce-lp-process__eyebrow,
+  .ecommerce-lp-deliver__eyebrow,
+  .ecommerce-lp-deliver__label,
+  .ecommerce-lp-work__eyebrow,
+  .ecommerce-lp-work__category,
+  .ecommerce-lp-hero__eyebrow { font-size: .75rem; }
+
+  .ecommerce-lp-faq__contact a,
+  .ecommerce-lp-work__copy>a,
+  .ecommerce-lp-work__all,
+  .ecommerce-lp-why__link { min-height: 44px; align-items: center; }
+  .ecommerce-lp-faq__contact a { display: inline-flex; }
+}
