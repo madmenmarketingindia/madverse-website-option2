@@ -1,0 +1,29 @@
+/* Employee voices: sample content until approved profiles are supplied. */
+.culture-voices { background: var(--color-header-bg); color: var(--color-text-primary); }
+.culture-voices__inner { padding-block: clamp(3rem, 7vw, 6rem); }
+.culture-voices__header { margin-bottom: clamp(1.75rem, 4vw, 3rem); text-align: center; }
+.culture-voices__eyebrow { margin-bottom: 1rem; color: var(--color-red); font-size: .6875rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.culture-voices h2 { font-size: clamp(2rem, 8vw, 4rem); font-weight: 900; line-height: .96; letter-spacing: var(--tracking-tighter); text-transform: uppercase; }
+.culture-voices h2 span { color: var(--color-red); }
+.culture-voices__intro { margin-top: 1rem; color: var(--color-text-secondary); font-size: .875rem; line-height: 1.5; }
+.culture-voices__grid { display: grid; gap: 1rem; max-width: 70rem; margin-inline: auto; }
+.voice-card { display: flex; flex-direction: column; min-width: 0; margin: 0; padding: clamp(1.25rem, 3.5vw, 2.5rem); border: 1px solid var(--color-border-strong); background: #101016; }
+.voice-card__quote-mark { display: block; height: 3rem; color: var(--color-red); font-size: 5rem; font-weight: 900; line-height: 1; }
+.voice-card__label { margin: .75rem 0 .5rem; color: var(--color-text-secondary); font-size: .625rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.voice-card blockquote { margin: 0; color: var(--color-text-primary); font-size: clamp(1.125rem, 4.6vw, 1.625rem); font-weight: 700; line-height: 1.3; letter-spacing: -.02em; }
+.voice-card__person { position: relative; display: flex; align-items: center; gap: 1rem; margin-top: auto; padding-top: 3rem; }
+.voice-card__person::before { content: ''; position: absolute; left: 0; top: 1.5rem; width: 1.75rem; height: 2px; background: #737377; }
+/* Portrait window from the approved mockup, excluding surrounding quote text. */
+.voice-card__portrait { display: block; flex: 0 0 52px; width: 52px; height: 52px; background-color: #242429; background-image: url('../assets/img/culture-voice-placeholder.webp'); background-repeat: no-repeat; background-size: 712.878788% 1441.37931%; background-position: 17.305315% 51.285347%; border: 1px solid var(--color-border); }
+.voice-card__identity { display: flex; flex-direction: column; gap: .25rem; min-width: 0; }
+.voice-card__identity strong { font-size: .9375rem; font-weight: 700; line-height: 1.2; }
+.voice-card__identity > span { color: var(--color-text-secondary); font-size: .75rem; line-height: 1.4; }
+.culture-voices__note { max-width: 36rem; margin: 1.5rem auto 0; color: var(--color-text-secondary); text-align: center; font-size: .6875rem; line-height: 1.5; }
+@media (min-width: 768px) {
+  .culture-voices__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+  .culture-voices__intro { font-size: 1rem; }
+  .voice-card__portrait { flex-basis: 64px; width: 64px; height: 64px; }
+  .voice-card__identity strong { font-size: 1.125rem; }
+  .voice-card__identity > span { font-size: .875rem; }
+  .culture-voices__note { font-size: .8125rem; }
+}
