@@ -1,0 +1,28 @@
+/* Compact, nested timeline within Our Story. Historical details await confirmation. */
+.about-journey { grid-column: 1 / -1; min-width: 0; padding: clamp(1.125rem, 4vw, 3rem); color: var(--color-text-primary); background: var(--color-header-bg); }
+.about-journey__header { text-align: center; margin-bottom: clamp(1.75rem, 5vw, 3.5rem); }
+.about-journey__eyebrow { margin-bottom: 1rem; color: var(--color-red); font-size: .6875rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.about-journey h3 { color: var(--color-text-primary); font-size: clamp(1.4rem, 6.9vw, 4rem); line-height: .98; font-weight: 900; letter-spacing: var(--tracking-tighter); text-transform: uppercase; }
+.about-journey h3 span { color: var(--color-red); }
+.about-journey__milestones { margin-left: .45rem; }
+.about-journey__milestones > li { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 36%; align-items: center; column-gap: .5rem; min-height: clamp(112px, 27vw, 240px); padding: 1rem 0 1rem clamp(1rem, 3vw, 2.5rem); border-left: 1px solid var(--color-red); }
+.about-journey__milestones > li::before { content: ''; position: absolute; left: -5px; top: 1.2rem; width: 9px; height: 9px; border-radius: 50%; background: var(--color-red); }
+.about-journey__copy { align-self: start; }
+.about-journey__year { color: var(--color-text-secondary); font-size: clamp(.625rem, 2.6vw, 1rem); line-height: 1.3; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.about-journey h4 { margin: .5rem 0; color: var(--color-text-primary); font-size: clamp(.875rem, 4.45vw, 2rem); line-height: 1.1; font-weight: 900; text-transform: uppercase; }
+.about-journey__description { color: var(--color-text-secondary); font-size: clamp(.6875rem, 2.95vw, 1.25rem); line-height: 1.4; }
+/* Windows into the approved concept keep its artwork separate from live text. */
+.about-journey__art { display: block; width: 100%; aspect-ratio: 380 / 270; background-image: url('../assets/img/about-journey-artwork.webp'); background-size: 295.263158% 519.259259%; background-repeat: no-repeat; }
+.about-journey__art--beginning { background-position: 88.948787% 33.568905%; }
+.about-journey__art--expansion { background-position: 88.948787% 60.954064%; }
+.about-journey__art--collective { background-position: 88.948787% 85.24735%; }
+.about-journey__note { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--color-border-strong); color: var(--color-text-secondary); text-align: center; font-size: .6875rem; line-height: 1.4; }
+@media (max-width: 767px) {
+  .about-journey { margin-inline: calc(-1 * var(--gutter-inline)); }
+}
+@media (min-width: 768px) {
+  .about-journey { width: 100%; max-width: 64rem; justify-self: center; }
+  .about-journey__milestones > li { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+  .about-journey__milestones > li::before { top: 1.7rem; width: 13px; height: 13px; left: -7px; }
+  .about-journey__note { font-size: .8125rem; }
+}
