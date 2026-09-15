@@ -1,0 +1,44 @@
+[
+  {
+    "width": 320,
+    "faqKeyboardOpens": true,
+    "faqClicksToggleAll": true,
+    "heroBottom": 791.890625,
+    "viewportHeight": 844,
+    "viewport": 320,
+    "scrollWidth": 320,
+    "overflow": [],
+    "clippedText": [],
+    "brokenImages": [],
+    "menuOpens": true,
+    "escapeClosesMenu": true
+  },
+  {
+    "width": 768,
+    "faqKeyboardOpens": true,
+    "faqClicksToggleAll": true,
+    "heroBottom": 607.703125,
+    "viewportHeight": 844,
+    "viewport": 768,
+    "scrollWidth": 768,
+    "overflow": [],
+    "clippedText": [],
+    "brokenImages": [],
+    "menuOpens": true,
+    "escapeClosesMenu": true
+  },
+  {
+    "width": 1366,
+    "faqKeyboardOpens": true,
+    "faqClicksToggleAll": true,
+    "heroBottom": 769,
+    "viewportHeight": 768,
+    "viewport": 1366,
+    "scrollWidth": 1351,
+    "overflow": [],
+    "clippedText": [],
+    "brokenImages": [],
+    "menuOpens": true,
+    "escapeClosesMenu": true
+  }
+]

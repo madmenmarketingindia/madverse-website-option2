@@ -1,3 +1,9 @@
+/* Match the square-edged calls to action used across the main site. */
+.services-hero__actions .btn,
+.services-final-cta__button {
+  border-radius: 0;
+}
+
 /* Compact, aligned engagement cards on desktop only. */
 @media (min-width: 1024px) {
   .services-models { padding-block: clamp(4rem, 6vw, 6rem); }

@@ -1,7 +1,8 @@
 /* Concrete examples extend the existing values section. */
 .culture-principles--practice { background: var(--color-header-bg); }
 .culture-principles--practice .culture-principles__header { display: block; text-align: center; margin-bottom: 1.75rem; }
-.culture-principles--practice .culture-principles__header h2 { max-width: none; font-size: clamp(1.8rem, 7.8vw, 4rem); line-height: .96; letter-spacing: var(--tracking-tighter); text-transform: uppercase; }
+/* Inherit the same responsive typography as the Life and Careers headings. */
+.culture-principles--practice .culture-principles__header h2 { max-width: none; }
 .culture-principles--practice .culture-principles__header h2 span { color: var(--color-red); }
 .culture-principles--practice .culture-principles__header > p { max-width: none; margin: 1rem auto 0; font-size: .875rem; line-height: 1.5; }
 .culture-principles--practice .culture-principles__header .culture-practice__label { margin-top: 1.25rem; font-size: .625rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
