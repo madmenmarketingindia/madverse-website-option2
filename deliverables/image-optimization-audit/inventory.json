@@ -1,0 +1,801 @@
+[
+  {
+    "path": "assets/img/work/print/amla-hair-oil-clipon/banner-generated-v2.png",
+    "kb": 6043,
+    "width": 2500,
+    "height": 1020,
+    "mode": "RGBA",
+    "used_by": [
+      "work.html",
+      "work/amla-hair-oil-clipon-print.html"
+    ]
+  },
+  {
+    "path": "assets/img/work/print/red-paste-new-print/banner-generated.png",
+    "kb": 5820,
+    "width": 2500,
+    "height": 1020,
+    "mode": "RGBA",
+    "used_by": [
+      "work.html",
+      "work/red-paste-new-print.html"
+    ]
+  },
+  {
+    "path": "assets/img/work/print/dcp-clipon/banner-generated.png",
+    "kb": 5499,
+    "width": 2500,
+    "height": 1020,
+    "mode": "RGBA",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/work/print/dcp-clipon/banner-generated-lossless.webp",
+    "kb": 2433,
+    "width": 2500,
+    "height": 1020,
+    "mode": "RGBA",
+    "used_by": [
+      "work.html",
+      "work/dcp-clipon-print.html"
+    ]
+  },
+  {
+    "path": "assets/img/thinking-high-trust-culture-v1.png",
+    "kb": 2231,
+    "width": 1086,
+    "height": 1448,
+    "mode": "RGB",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/mad-talks/founder-conversation-colorful.png",
+    "kb": 2215,
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "used_by": [
+      "mad-talks.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-talks/shared-perspectives-colorful.png",
+    "kb": 2202,
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "used_by": [
+      "mad-talks.html"
+    ]
+  },
+  {
+    "path": "assets/img/services/brand-strategy-colourful-hero-v1.png",
+    "kb": 2173,
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "used_by": [
+      "brand-strategy-consulting-landing.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-talks/creative-conversation-colorful.png",
+    "kb": 2054,
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "used_by": [
+      "mad-talks.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-talks/shared-perspectives-preview.png",
+    "kb": 1909,
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/services/ecommerce-development-hero-v2.png",
+    "kb": 1895,
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "used_by": [
+      "ecommerce-development-landing.html"
+    ]
+  },
+  {
+    "path": "assets/img/thinking-connected-growth-v1.png",
+    "kb": 1894,
+    "width": 1086,
+    "height": 1448,
+    "mode": "RGB",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/mad-talks/founder-conversation-preview.png",
+    "kb": 1844,
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/thinking-collective-leadership-v1.png",
+    "kb": 1816,
+    "width": 1086,
+    "height": 1448,
+    "mode": "RGB",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/services/ecommerce-development-hero-v1.png",
+    "kb": 1738,
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/mad-talks/creative-conversation-preview.png",
+    "kb": 1735,
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/think-hero-v1.png",
+    "kb": 1524,
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "used_by": [
+      "think.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-men-production/video-landing-hero-v2.png",
+    "kb": 1376,
+    "width": 1673,
+    "height": 940,
+    "mode": "RGB",
+    "used_by": [
+      "video-content-production-landing.html"
+    ]
+  },
+  {
+    "path": "assets/img/collective-ecosystem-transparent-v3.png",
+    "kb": 1151,
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/hero-network-collage-v2.png",
+    "kb": 1114,
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/work/print/dazzl-disinfectant-spray-print/banner-generated.png",
+    "kb": 942,
+    "width": 2500,
+    "height": 1020,
+    "mode": "P",
+    "used_by": [
+      "work.html",
+      "work/dazzl-disinfectant-spray-print.html"
+    ]
+  },
+  {
+    "path": "assets/img/work/print/honitus-print/banner-generated.png",
+    "kb": 847,
+    "width": 2500,
+    "height": 1020,
+    "mode": "P",
+    "used_by": [
+      "work.html",
+      "work/honitus-print.html"
+    ]
+  },
+  {
+    "path": "assets/img/work/print/crax-clipon/banner-generated.png",
+    "kb": 835,
+    "width": 2500,
+    "height": 1020,
+    "mode": "P",
+    "used_by": [
+      "work.html",
+      "work/crax-clipon-print.html"
+    ]
+  },
+  {
+    "path": "assets/img/work/print/dazzl-shield-print/banner-generated.png",
+    "kb": 810,
+    "width": 2500,
+    "height": 1020,
+    "mode": "P",
+    "used_by": [
+      "work.html",
+      "work/dazzl-shield-print.html"
+    ]
+  },
+  {
+    "path": "assets/img/work/print/honey-clipon/banner-generated.png",
+    "kb": 810,
+    "width": 2500,
+    "height": 1020,
+    "mode": "P",
+    "used_by": [
+      "work.html",
+      "work/honey-clipon-print.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-men-hatters/process-draft-to-final-v1.png",
+    "kb": 780,
+    "width": 1774,
+    "height": 887,
+    "mode": "P",
+    "used_by": [
+      "mad-men-hatters.html"
+    ]
+  },
+  {
+    "path": "assets/img/work/print/dabur-immunity-conrner/banner-generated.png",
+    "kb": 777,
+    "width": 1020,
+    "height": 2500,
+    "mode": "P",
+    "used_by": [
+      "work.html",
+      "work/dabur-immunity-corner-print.html"
+    ]
+  },
+  {
+    "path": "assets/img/collective-ecosystem-v2.png",
+    "kb": 749,
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/work/print/dabur-veggie-wash-print/banner-generated.png",
+    "kb": 723,
+    "width": 2500,
+    "height": 1020,
+    "mode": "P",
+    "used_by": [
+      "work.html",
+      "work/dabur-veggie-wash-print.html"
+    ]
+  },
+  {
+    "path": "assets/img/articles/cultural-signals/hero-v2.png",
+    "kb": 715,
+    "width": 1086,
+    "height": 1448,
+    "mode": "P",
+    "used_by": [
+      "article.html",
+      "index.html",
+      "think.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-men-hatters/words-editorial-room-v1.png",
+    "kb": 700,
+    "width": 1448,
+    "height": 1086,
+    "mode": "P",
+    "used_by": [
+      "mad-men-hatters.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-men-digital/work-sports-v1.png",
+    "kb": 671,
+    "width": 1536,
+    "height": 1024,
+    "mode": "P",
+    "used_by": [
+      "mad-men-digital.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-men-marketing-hero-v1.png",
+    "kb": 670,
+    "width": 1823,
+    "height": 863,
+    "mode": "P",
+    "used_by": [
+      "mad-men-marketing.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-men-digital/hero-v1.png",
+    "kb": 667,
+    "width": 1672,
+    "height": 941,
+    "mode": "P",
+    "used_by": [
+      "ecommerce-marketplace-creative-landing.html",
+      "mad-men-digital.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-men-hatters/hero-v1.png",
+    "kb": 659,
+    "width": 1672,
+    "height": 941,
+    "mode": "P",
+    "used_by": [
+      "mad-men-hatters.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-men-digital/work-fashion-v1.png",
+    "kb": 654,
+    "width": 1448,
+    "height": 1086,
+    "mode": "P",
+    "used_by": [
+      "mad-men-digital.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-enaible/capability-versions-v1.png",
+    "kb": 633,
+    "width": 1448,
+    "height": 1086,
+    "mode": "P",
+    "used_by": [
+      "mad-enaible.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-men-digital/work-wellness-v1.png",
+    "kb": 630,
+    "width": 1536,
+    "height": 1024,
+    "mode": "P",
+    "used_by": [
+      "mad-men-digital.html"
+    ]
+  },
+  {
+    "path": "assets/img/madly-talented/network-v1.png",
+    "kb": 630,
+    "width": 1536,
+    "height": 1024,
+    "mode": "P",
+    "used_by": [
+      "madly-talented.html"
+    ]
+  },
+  {
+    "path": "assets/img/services/application-landing-hero-v1.png",
+    "kb": 630,
+    "width": 1536,
+    "height": 1024,
+    "mode": "P",
+    "used_by": [
+      "app-web-application-development-landing.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-enaible/hero-v1.png",
+    "kb": 629,
+    "width": 1672,
+    "height": 941,
+    "mode": "P",
+    "used_by": [
+      "mad-enaible.html"
+    ]
+  },
+  {
+    "path": "assets/img/madly-talented/hero-v1.png",
+    "kb": 602,
+    "width": 1870,
+    "height": 841,
+    "mode": "P",
+    "used_by": [
+      "madly-talented.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-enaible/capability-video-v1.png",
+    "kb": 599,
+    "width": 1448,
+    "height": 1086,
+    "mode": "P",
+    "used_by": [
+      "mad-enaible.html"
+    ]
+  },
+  {
+    "path": "assets/img/services/social-landing-hero-v1.png",
+    "kb": 598,
+    "width": 1374,
+    "height": 1145,
+    "mode": "P",
+    "used_by": [
+      "influencer-marketing-creator-campaigns-landing.html",
+      "social-media-content-marketing-landing.html"
+    ]
+  },
+  {
+    "path": "assets/img/work/english-oven-campaign-modern-v1.png",
+    "kb": 589,
+    "width": 1402,
+    "height": 1122,
+    "mode": "P",
+    "used_by": [
+      "mad-men-marketing.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-men-advertising/hero-v1.png",
+    "kb": 585,
+    "width": 1586,
+    "height": 992,
+    "mode": "P",
+    "used_by": [
+      "mad-men-advertising.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-enaible/capability-image-v1.png",
+    "kb": 575,
+    "width": 1448,
+    "height": 1086,
+    "mode": "P",
+    "used_by": [
+      "mad-enaible.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-men-perform/hero-v1.png",
+    "kb": 575,
+    "width": 1568,
+    "height": 1003,
+    "mode": "P",
+    "used_by": [
+      "mad-men-perform.html",
+      "media-performance-service.html",
+      "performance-marketing-lead-generation-landing.html"
+    ]
+  },
+  {
+    "path": "assets/img/careers-hero-v1.png",
+    "kb": 564,
+    "width": 1862,
+    "height": 845,
+    "mode": "P",
+    "used_by": [
+      "careers.html"
+    ]
+  },
+  {
+    "path": "assets/img/services/strategy-consulting-hero-v3.png",
+    "kb": 563,
+    "width": 1536,
+    "height": 1024,
+    "mode": "P",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/mad-enaible/capability-animation-v1.png",
+    "kb": 561,
+    "width": 1448,
+    "height": 1086,
+    "mode": "P",
+    "used_by": [
+      "mad-enaible.html"
+    ]
+  },
+  {
+    "path": "assets/img/work/one8select-campaign-modern-v1.png",
+    "kb": 550,
+    "width": 1402,
+    "height": 1122,
+    "mode": "P",
+    "used_by": [
+      "mad-men-marketing.html"
+    ]
+  },
+  {
+    "path": "assets/img/services/strategy-consulting-hero-v4.png",
+    "kb": 549,
+    "width": 1536,
+    "height": 1024,
+    "mode": "P",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/culture-hero-v1.png",
+    "kb": 548,
+    "width": 1721,
+    "height": 914,
+    "mode": "P",
+    "used_by": [
+      "culture.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-men-digital/purpose-brand-world-v1.png",
+    "kb": 540,
+    "width": 1448,
+    "height": 1086,
+    "mode": "P",
+    "used_by": [
+      "mad-men-digital.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-men-technologies/hero-v1.png",
+    "kb": 540,
+    "width": 1662,
+    "height": 946,
+    "mode": "P",
+    "used_by": [
+      "mad-men-technologies.html"
+    ]
+  },
+  {
+    "path": "assets/img/services/technology-innovation-hero-v1.png",
+    "kb": 511,
+    "width": 1536,
+    "height": 1024,
+    "mode": "P",
+    "used_by": [
+      "technology-innovation-service.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-enaible/capability-script-v1.png",
+    "kb": 503,
+    "width": 1448,
+    "height": 1086,
+    "mode": "P",
+    "used_by": [
+      "mad-enaible.html"
+    ]
+  },
+  {
+    "path": "assets/img/articles/creative-systems/hero-v2.png",
+    "kb": 493,
+    "width": 1086,
+    "height": 1448,
+    "mode": "P",
+    "used_by": [
+      "article.html",
+      "index.html",
+      "think.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-men-production/hero-v1.png",
+    "kb": 483,
+    "width": 1823,
+    "height": 863,
+    "mode": "P",
+    "used_by": [
+      "film-production-service.html",
+      "mad-men-production.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-men-design/hero-v1.png",
+    "kb": 479,
+    "width": 1672,
+    "height": 941,
+    "mode": "P",
+    "used_by": [
+      "brand-identity-packaging-design-landing.html",
+      "mad-men-design.html"
+    ]
+  },
+  {
+    "path": "assets/img/madly-talented/selected-work-v1.png",
+    "kb": 471,
+    "width": 1919,
+    "height": 820,
+    "mode": "P",
+    "used_by": [
+      "madly-talented.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-men-technologies/product-showcase-v1.png",
+    "kb": 464,
+    "width": 1717,
+    "height": 916,
+    "mode": "P",
+    "used_by": [
+      "mad-men-technologies.html"
+    ]
+  },
+  {
+    "path": "assets/img/mad-enaible/capability-design-v1.png",
+    "kb": 454,
+    "width": 1448,
+    "height": 1086,
+    "mode": "P",
+    "used_by": [
+      "mad-enaible.html"
+    ]
+  },
+  {
+    "path": "assets/img/services/social-content-hero-v2.png",
+    "kb": 430,
+    "width": 1213,
+    "height": 1024,
+    "mode": "P",
+    "used_by": [
+      "social-content-service.html"
+    ]
+  },
+  {
+    "path": "assets/img/services/strategy-consulting-hero-v7.png",
+    "kb": 413,
+    "width": 1339,
+    "height": 916,
+    "mode": "P",
+    "used_by": [
+      "strategy-consulting-service.html"
+    ]
+  },
+  {
+    "path": "assets/img/services/social-content-hero-v1.png",
+    "kb": 409,
+    "width": 1536,
+    "height": 1024,
+    "mode": "P",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/services/brand-experience-design-hero-v1.png",
+    "kb": 390,
+    "width": 1536,
+    "height": 1024,
+    "mode": "P",
+    "used_by": [
+      "brand-experience-design-service.html"
+    ]
+  },
+  {
+    "path": "assets/img/services/strategy-consulting-hero-v5.png",
+    "kb": 365,
+    "width": 1536,
+    "height": 1024,
+    "mode": "P",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/services-network-v1.png",
+    "kb": 342,
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGBA",
+    "used_by": [
+      "services.html"
+    ]
+  },
+  {
+    "path": "assets/img/services/strategy-consulting-hero-v1.png",
+    "kb": 322,
+    "width": 1672,
+    "height": 941,
+    "mode": "P",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/services/strategy-consulting-hero-v2.png",
+    "kb": 316,
+    "width": 1536,
+    "height": 1024,
+    "mode": "P",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/services/creative-campaigns-hero-v1.png",
+    "kb": 311,
+    "width": 1536,
+    "height": 1024,
+    "mode": "P",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/services/creative-campaigns-hero-v2.png",
+    "kb": 275,
+    "width": 1536,
+    "height": 1024,
+    "mode": "P",
+    "used_by": [
+      "brand-strategy-consulting-landing.html",
+      "creative-campaigns-service.html"
+    ]
+  },
+  {
+    "path": "assets/img/services/strategy-consulting-hero-v6.png",
+    "kb": 272,
+    "width": 1536,
+    "height": 1024,
+    "mode": "P",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/hero-network-bg-v3.png",
+    "kb": 203,
+    "width": 1280,
+    "height": 1229,
+    "mode": "P",
+    "used_by": [
+      "index.html"
+    ]
+  },
+  {
+    "path": "assets/img/work/case-english-oven-campaign-v2.jpg",
+    "kb": 190,
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "used_by": [
+      "index.html",
+      "mad-men-advertising.html",
+      "work.html"
+    ]
+  },
+  {
+    "path": "assets/img/thinking-reference-decode-v2.jpg",
+    "kb": 109,
+    "width": 720,
+    "height": 960,
+    "mode": "RGB",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/thinking-creative-os-v2.jpg",
+    "kb": 92,
+    "width": 720,
+    "height": 960,
+    "mode": "RGB",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/work/case-one8select-campaign-v2.jpg",
+    "kb": 83,
+    "width": 1200,
+    "height": 1200,
+    "mode": "RGB",
+    "used_by": [
+      "index.html",
+      "mad-men-advertising.html",
+      "work.html"
+    ]
+  },
+  {
+    "path": "assets/img/thinking-growth-v2.jpg",
+    "kb": 76,
+    "width": 720,
+    "height": 960,
+    "mode": "RGB",
+    "used_by": []
+  },
+  {
+    "path": "assets/img/thinking-founder-v2.jpg",
+    "kb": 75,
+    "width": 720,
+    "height": 960,
+    "mode": "RGB",
+    "used_by": []
+  }
+]

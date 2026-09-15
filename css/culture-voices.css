@@ -3,7 +3,7 @@
 .culture-voices__inner { padding-block: clamp(3rem, 7vw, 6rem); }
 .culture-voices__header { margin-bottom: clamp(1.75rem, 4vw, 3rem); text-align: center; }
 .culture-voices__eyebrow { margin-bottom: 1rem; color: var(--color-red); font-size: .6875rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
-.culture-voices h2 { font-size: clamp(2rem, 8vw, 4rem); font-weight: 900; line-height: .96; letter-spacing: var(--tracking-tighter); text-transform: uppercase; }
+/* Heading typography comes from the shared Culture section rules. */
 .culture-voices h2 span { color: var(--color-red); }
 .culture-voices__intro { margin-top: 1rem; color: var(--color-text-secondary); font-size: .875rem; line-height: 1.5; }
 .culture-voices__grid { display: grid; gap: 1rem; max-width: 70rem; margin-inline: auto; }
