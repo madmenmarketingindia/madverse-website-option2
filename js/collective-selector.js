@@ -9,22 +9,22 @@
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   var activeAnimation;
   var challenges = {
-    brand: { label: 'Your brand launch collective', title: 'From first idea to first impression.', cta: 'Discuss your brand launch', teams: [
+    brand: { label: 'Your brand launch collective', title: 'From first idea to first impression', cta: 'Discuss your brand launch', teams: [
       ['Mad Men Marketing', 'Sets the positioning and launch strategy.', 'mad-men-marketing.html'],
       ['Mad Men Design', 'Builds the identity and visual system.', 'mad-men-design.html'],
       ['Mad Men Advertising', 'Turns the launch idea into a campaign.', 'mad-men-advertising.html']
     ] },
-    campaign: { label: 'Your campaign collective', title: 'One idea. Built to move people.', cta: 'Discuss your campaign', teams: [
+    campaign: { label: 'Your campaign collective', title: 'One idea Built to move people', cta: 'Discuss your campaign', teams: [
       ['Mad Men Advertising', 'Shapes the campaign idea and creative direction.', 'mad-men-advertising.html'],
       ['Mad Men Production', 'Brings the idea to life through film and content.', 'mad-men-production.html'],
       ['Mad Men Perform', 'Connects media and optimisation to campaign goals.', 'mad-men-perform.html']
     ] },
-    digital: { label: 'Your digital experience collective', title: 'From brand ambition to digital experience.', cta: 'Discuss your digital experience', teams: [
+    digital: { label: 'Your digital experience collective', title: 'From brand ambition to digital experience', cta: 'Discuss your digital experience', teams: [
       ['Mad Men Marketing', 'Defines the audience, purpose and business goals.', 'mad-men-marketing.html'],
       ['Mad Men Design', 'Shapes the visual identity and user experience.', 'mad-men-design.html'],
       ['Mad Men Technologies', 'Builds the website, app or digital platform.', 'mad-men-technologies.html']
     ] },
-    content: { label: 'Your content growth collective', title: 'A clear voice. More ways to connect.', cta: 'Discuss your content growth', teams: [
+    content: { label: 'Your content growth collective', title: 'A clear voice More ways to connect', cta: 'Discuss your content growth', teams: [
       ['Mad Men Hatters', 'Develops the voice, scripts and content writing.', 'mad-men-hatters.html'],
       ['Mad Men Production', 'Creates film and content for modern screens.', 'mad-men-production.html'],
       ['Mad ENAiBLe', 'Expands creative possibilities with AI-assisted assets.', 'mad-enaible.html']

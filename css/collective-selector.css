@@ -9,7 +9,6 @@
 .collective-selector__tabs[hidden] { display: none; }
 .collective-selector__tabs button { min-width: 0; min-height: 52px; padding: .875rem .5rem; border: 1px solid var(--color-border-strong); color: var(--color-text-secondary); font-size: .875rem; font-weight: 700; line-height: 1.2; }
 .collective-selector__tabs button[aria-selected="true"] { background: var(--color-red); border-color: var(--color-red); color: white; }
-.collective-selector__tabs button[aria-selected="true"]::after { content: ' ✓'; }
 .collective-selector__tabs button:focus-visible, .collective-selector__cta:focus-visible { outline: 2px solid white; outline-offset: 3px; }
 .collective-selector__panel { margin-top: 1.75rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border-strong); }
 .collective-selector__label { color: var(--color-text-secondary); font-size: .625rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
@@ -17,8 +16,8 @@
 .collective-selector__teams { margin-left: 4px; border-top: 1px solid var(--color-border-strong); }
 .collective-selector__teams li { position: relative; border-left: 1px solid var(--color-red); border-bottom: 1px solid var(--color-border-strong); }
 .collective-selector__teams li::before { content: ''; position: absolute; left: -4px; top: 1.45rem; width: 7px; height: 7px; background: var(--color-red); border-radius: 50%; }
-.collective-selector__teams a { display: grid; grid-template-columns: 22px minmax(0, 1fr) 22px; gap: .5rem; align-items: start; padding: 1.25rem 0 1.25rem .875rem; min-height: 96px; }
-.collective-selector__number { color: var(--color-red); font-size: .8125rem; font-weight: 700; }
+.collective-selector__teams a { display: grid; grid-template-columns: minmax(0, 1fr) 22px; gap: .5rem; align-items: start; padding: 1.25rem 0 1.25rem .875rem; min-height: 96px; }
+.collective-selector__number { display: none; }
 .collective-selector__teams strong { display: block; font-size: 1rem; line-height: 1.2; }
 .collective-selector__teams a > span:nth-child(2) > span { display: block; margin-top: .4rem; color: var(--color-text-secondary); font-size: .8125rem; line-height: 1.4; }
 .collective-selector__arrow { font-size: 1.5rem; line-height: 1; align-self: center; }
