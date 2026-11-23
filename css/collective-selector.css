@@ -27,6 +27,12 @@
 .collective-selector__cta > span:last-child { font-size: 1.5rem; }
 .collective-selector__fallback { margin-top: 1rem; color: var(--color-text-secondary); }
 .collective-selector__fallback a { text-decoration: underline; }
+@media (max-width: 899px) {
+  .collective-selector__cta {
+    width: min(100%, 23rem);
+    margin-inline: auto;
+  }
+}
 @media (hover: hover) {
   .collective-selector__teams a:hover strong { color: var(--color-red); }
   .collective-selector__tabs button:hover { border-color: var(--color-red); }

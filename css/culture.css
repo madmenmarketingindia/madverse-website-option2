@@ -26,12 +26,13 @@
 .culture-hero__title {
   font-size: clamp(2.75rem, 12vw, 5.5rem);
   font-weight: var(--font-black);
-  line-height: .86;
+  line-height: 1.02;
   letter-spacing: var(--tracking-tighter);
   text-transform: uppercase;
 }
 
-.culture-hero__title span { color: var(--color-red-light); }
+.culture-hero__title > span { display: block; text-wrap: balance; }
+.culture-hero__title > span + span { margin-top: .15em; color: var(--color-red-light); }
 
 .culture-hero__intro {
   max-width: 34rem;
@@ -116,9 +117,12 @@
     align-items: center;
   }
 
-  .culture-hero__content { width: min(42%, 34rem); padding-block: var(--space-8); }
+  .culture-hero__content { width: min(46%, 36rem); padding-block: clamp(2rem, 5vh, 4rem); }
 
-  .culture-hero__title { font-size: clamp(4rem, 5.6vw, 6rem); }
+  .culture-hero__title { font-size: clamp(2.25rem, 3.6vw, 3.75rem); }
+  .culture-hero__eyebrow { margin-bottom: 1.25rem; }
+  .culture-hero__intro { max-width: 30rem; margin-top: 1.5rem; font-size: clamp(1rem, 1.3vw, 1.125rem); line-height: 1.6; }
+  .culture-hero__link { margin-top: 1.75rem; }
 
   .culture-hero__visual {
     position: absolute;
@@ -532,13 +536,6 @@
 
   .culture-page-shell .people-section {
     padding-block-start: 2rem;
-  }
-}
-
-/* Keep the desktop heading responsive after the shared 5rem heading rule. */
-@media (min-width: 1024px) {
-  .culture-hero .culture-hero__title {
-    font-size: clamp(3rem, min(5.6vw, 9vh), 5rem);
   }
 }
 

@@ -1,3 +1,11 @@
+/* Match the other primary Work page actions on mobile. */
+@media (max-width: 767px) {
+  .work-page-shell .work-library__more {
+    width: min(100%, 23rem);
+    margin-inline: auto;
+  }
+}
+
 /* Align mixed-category project cards on desktop without cropping artwork. */
 @media (min-width: 1024px) {
   .work-page-shell .work-library__grid { align-items: stretch; }

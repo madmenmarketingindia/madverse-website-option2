@@ -1,4 +1,9 @@
-/* Laptop layout; leave the existing mobile and tablet composition intact. */
+/* Match the standard contact button width on mobile. */
+@media (max-width: 767px) {
+  .work-hero__link { width: min(100%, 23rem); }
+}
+
+/* Laptop layout. */
 @media (min-width: 1024px) {
   .work-hero__inner {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);

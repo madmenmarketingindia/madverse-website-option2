@@ -5,7 +5,7 @@
    ========================================================================== */
 
 /* ---- Button ------------------------------------------------------------
-   Pill-shaped, uppercase label + arrow. Three variants: primary (solid
+   Square corners, uppercase label + arrow. Three variants: primary (solid
    red, the default CTA), outline (white ring, for use on dark/red fields),
    ghost (text-only, for low-emphasis links). */
 
@@ -14,7 +14,7 @@
   align-items: center;
   gap: var(--space-3);
   padding: var(--space-4) var(--space-6);
-  border-radius: var(--radius-pill);
+  border-radius: 0;
   font-size: var(--text-caption);
   font-weight: var(--font-bold);
   text-transform: uppercase;
@@ -33,6 +33,8 @@
 
 .btn__arrow {
   display: inline-flex;
+  margin-inline-start: auto;
+  flex-shrink: 0;
   transition: transform var(--duration-base) var(--ease-out);
 }
 
@@ -74,6 +76,74 @@
 .btn--block {
   width: 100%;
   justify-content: center;
+}
+
+/* Mobile red actions and the paired home secondary action share the closing
+   contact CTA's 23rem width cap.
+   Important sizing keeps later page styles from reinstating local widths.
+   Tabs, filters, artwork and other non-red actions retain their own sizing. */
+@media (max-width: 767px) {
+  /* Give text-based hero arrows the same visual weight as the image arrows. */
+  main section[class*="hero"] :is(
+    .btn,
+    .profile-hero__cta,
+    .digital-hero__cta,
+    .hatters-hero__cta,
+    .enaible-hero__cta
+  ) > span[aria-hidden="true"] {
+    font-size: 1.5rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  :is(
+    .btn--primary,
+    .contact-cta__button,
+    .ecosystem-cta--primary,
+    .home-page-shell .ecosystem-cta--secondary,
+    .home-case__cta,
+    .collective-selector__cta,
+    .collective-hero__link,
+    .culture-hero__link,
+    .careers-hero__link,
+    .profile-hero__cta,
+    .mmm-hero__cta,
+    .digital-hero__cta,
+    .digital-work__all,
+    .hatters-hero__cta,
+    .hatters-work__all,
+    .enaible-hero__cta,
+    .think-hero__link,
+    .think-newsletter__field button,
+    .job-detail-hero__bottom > a,
+    .application-form button,
+    .error-hero__primary,
+    .work-hero__link,
+    .work-library__more,
+    .contact-hero__email,
+    .contact-next__email,
+    .contact-form__submit,
+    .services-proof__cta,
+    .services-process__promise a,
+    .services-final-cta__button,
+    .strategy-service__cta .container > a,
+    .technology-service__engage-prompt a,
+    .campaign-lp-create__close a
+  ) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(100%, 23rem) !important;
+    min-width: 0 !important;
+    max-width: min(100%, 23rem) !important;
+    margin-inline: auto !important;
+    white-space: normal;
+  }
+
+  /* Keep the newsletter action out of an intrinsic-width grid column. */
+  .think-newsletter__field { grid-template-columns: minmax(0, 1fr) !important; }
+  .services-final-cta__bottom { grid-template-columns: minmax(0, 1fr) !important; }
+  .error-hero__actions { flex-direction: column; }
 }
 
 /* ---- Tag / badge --------------------------------------------------------
